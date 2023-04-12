@@ -44,9 +44,9 @@ export const pretty = Logger.make(
       const text = HashMap.reduceWithIndex(
         annotations,
         [] as string[],
-        (acc, v, k) => [...acc, `${k}: ${v}`],
+        (acc, v, k) => [...acc, `${WHITE}"${k}"${RESET}: "${v}"`],
       );
-      console.log(`${DIM}{ ${text.join(", ")} }${RESET}`);
+      console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
     }
   },
 );
