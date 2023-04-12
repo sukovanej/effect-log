@@ -1,0 +1,12 @@
+src
+test
+.prettierrc.json
+.changeset
+pnpm-lock.yaml
+vite.config.js
+coverage
+.github
+examples
+node_modules
+CHANGELOG.md
+assets
