@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.0.3
+
+### Patch Changes
+
+- 741f405: fix log level padding
+
 ## 0.0.2
 
 ### Patch Changes
