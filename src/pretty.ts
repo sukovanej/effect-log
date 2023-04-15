@@ -26,7 +26,7 @@ const SEVERITY_TO_COLOR: Record<LogLevel["_tag"], string> = {
 export const pretty = Logger.make(
   (fiberId, logLevel, message, _cause, _context, _spans, annotations) => {
     const logLevelColor = SEVERITY_TO_COLOR[logLevel._tag];
-    const logLevelText = logLevel.label.padEnd(7, " ");
+    const logLevelText = logLevel.label.padEnd(5, " ");
     const logLevelStr = `${logLevelColor}${logLevelText}${RESET}`;
 
     const now = new Date();
