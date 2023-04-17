@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.12.2
     version: 0.12.2
   '@effect/io':
-    specifier: ^0.22.1
-    version: 0.22.1
+    specifier: ^0.22.2
+    version: 0.22.2
 
 devDependencies:
   '@changesets/cli':
@@ -339,8 +339,8 @@ packages:
     resolution: {integrity: sha512-bmWRTcsSRG1FlBswT+D8SxW6r3c4B3pKJrjYfitCD03tXHnup5gLHaWqbFgIjiyYITS+UsJRRjVrNxvyGG4ZNQ==}
     dev: false
 
-  /@effect/io@0.22.1:
-    resolution: {integrity: sha512-56LUngnx5mVchQ8cjXkGTMtgxwKdd/HUlDh613bKKX/oESWoGHvbXD/caK06Td3+cVCD+HMa5ma+z35+Qrhlrw==}
+  /@effect/io@0.22.2:
+    resolution: {integrity: sha512-6Teo25WVHXiIQoLLVp0BVyjTsQ/Avtr3GtTHPi0R2rgOHrNUzOf9feV7+EHzIjL7I5Xfv7P7kx8MrAc5Gv5QDg==}
     dependencies:
       '@effect/data': 0.12.2
 
