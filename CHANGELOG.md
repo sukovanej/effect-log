@@ -1,5 +1,12 @@
 # effect-log
 
+## 0.0.4
+
+### Patch Changes
+
+- ec39256: update deps
+- 9cf538e: update dependencies
+
 ## 0.0.3
 
 ### Patch Changes
