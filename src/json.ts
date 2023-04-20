@@ -2,6 +2,8 @@ import * as HashMap from "@effect/data/HashMap";
 import { threadName } from "@effect/io/Fiber/Id";
 import * as Logger from "@effect/io/Logger";
 
+import { overrideLoggersBy } from "./internal";
+
 export const json = (messageField?: string) =>
   Logger.make(
     (fiberId, logLevel, message, _cause, _context, _spans, annotations) => {
@@ -23,4 +25,4 @@ export const json = (messageField?: string) =>
   );
 
 export const useJsonLogger = (...args: Parameters<typeof json>) =>
-  Logger.replace(Logger.defaultLogger, json(...args));
+  overrideLoggersBy(json(...args));
