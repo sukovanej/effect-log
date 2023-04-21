@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.0.6
+
+### Patch Changes
+
+- d45500f: update dependencies
+
 ## 0.0.5
 
 ### Patch Changes
