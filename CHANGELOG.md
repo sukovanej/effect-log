@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.0.7
+
+### Patch Changes
+
+- 258e720: remove peer dependencies
+
 ## 0.0.6
 
 ### Patch Changes
