@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.0.8
+
+### Patch Changes
+
+- 40d8e57: fix dependencies
+
 ## 0.0.7
 
 ### Patch Changes
