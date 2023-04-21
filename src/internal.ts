@@ -5,6 +5,7 @@ import * as FiberRef from "@effect/io/FiberRef";
 import * as Layer from "@effect/io/Layer";
 import * as Logger from "@effect/io/Logger";
 
+/** @internal */
 export const overrideLoggersBy = Debug.untracedMethod(
   () =>
     <A>(logger: Logger.Logger<string, A>): Layer.Layer<never, never, never> =>
