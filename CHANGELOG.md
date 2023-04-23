@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.1.0
+
+### Minor Changes
+
+- 0f4e66f: Change use -> set, reexport default and none logger setters
+
 ## 0.0.8
 
 ### Patch Changes
