@@ -15,7 +15,7 @@ import * as Effect from "@effect/io/Effect";
 
 const effectWithPrettylogger = pipe(
   someEffect,
-  Effect.provideLayer(Log.usePrettyLogger),
+  Effect.provideLayer(Log.setPrettyLogger),
   Effect.runSync,
 );
 ```
@@ -36,7 +36,7 @@ import * as Effect from "@effect/io/Effect";
 
 const effectWithJsonLogger = pipe(
   someEffect,
-  Effect.provideLayer(Log.useJsonLogger()),
+  Effect.provideLayer(Log.setJsonLogger()),
   Effect.runSync,
 );
 ```
