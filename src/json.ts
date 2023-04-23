@@ -24,5 +24,5 @@ export const json = (messageField?: string) =>
     },
   );
 
-export const useJsonLogger = (...args: Parameters<typeof json>) =>
+export const setJsonLogger = (...args: Parameters<typeof json>) =>
   setLogger(json(...args));
