@@ -3,7 +3,7 @@ import { threadName } from "@effect/io/Fiber/Id";
 import * as Logger from "@effect/io/Logger";
 import { LogLevel } from "@effect/io/Logger/Level";
 
-import { overrideLoggersBy } from "./internal";
+import { setLogger } from "./setLogger";
 
 const RESET = "\x1b[0m";
 const DIM = "\x1b[2m";
@@ -53,4 +53,4 @@ export const pretty = Logger.make(
   },
 );
 
-export const usePrettyLogger = overrideLoggersBy(pretty);
+export const setPrettyLogger = setLogger(pretty);
