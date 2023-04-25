@@ -1,5 +1,15 @@
 # effect-log
 
+## 0.2.0
+
+### Minor Changes
+
+- d897266: remove set combinators
+
+### Patch Changes
+
+- 1df4d02: upgrade dependencies
+
 ## 0.1.0
 
 ### Minor Changes
