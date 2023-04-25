@@ -7,8 +7,6 @@ import { exampleEffect } from "./example-loggin-effect";
 
 pipe(
   exampleEffect,
-  Effect.provideLayer(
-    Logger.replace(Logger.defaultLogger, Log.json()),
-  ),
+  Effect.provideLayer(Logger.replace(Logger.defaultLogger, Log.json())),
   Effect.runSync,
 );
