@@ -4,18 +4,18 @@ Logging batteris for effect-ts.
 
 ## [Pretty logger](examples/pretty-logger.ts)
 
-Use `Log.pretty` to get the pretty logger or `Log.usePrettyLogger` to
-get a layer with the logger.
+Use `Log.pretty` to get the pretty logger.
 
 ```typescript
 import * as Log from "effect-log";
 
 import { pipe } from "@effect/data/Function";
 import * as Effect from "@effect/io/Effect";
+import * as Logger from "@effect/io/Logger";
 
 const effectWithPrettylogger = pipe(
   someEffect,
-  Effect.provideLayer(Log.setPrettyLogger),
+  Effect.provideLayer(Logger.replace(Logger.defaultLogger, Log.pretty)),
   Effect.runSync,
 );
 ```
@@ -24,8 +24,7 @@ const effectWithPrettylogger = pipe(
 
 ## [JSON logger](examples/json-logger.ts)
 
-Use `Log.json()` to get the pretty logger or `Log.useJsonLogger()` to
-get a layer with the logger. Optionally, both combinators accepts
+Use `Log.json()` to get the pretty logger. Optionally, the function accepts
 a string argument specifying a name of the message field.
 
 ```typescript
@@ -33,10 +32,11 @@ import * as Log from "effect-log";
 
 import { pipe } from "@effect/data/Function";
 import * as Effect from "@effect/io/Effect";
+import * as Logger from "@effect/io/Logger";
 
 const effectWithJsonLogger = pipe(
   someEffect,
-  Effect.provideLayer(Log.setJsonLogger()),
+  Effect.provideLayer(Logger.replace(Logger.defaultLogger, Log.json())),
   Effect.runSync,
 );
 ```
