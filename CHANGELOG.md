@@ -1,5 +1,12 @@
 # effect-log
 
+## 0.2.1
+
+### Patch Changes
+
+- e32c9cc: update readme
+- 9c15eba: Update dependencies
+
 ## 0.2.0
 
 ### Minor Changes
