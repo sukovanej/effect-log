@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.2.2
+
+### Patch Changes
+
+- bc51901: Update dependencies
+
 ## 0.2.1
 
 ### Patch Changes
