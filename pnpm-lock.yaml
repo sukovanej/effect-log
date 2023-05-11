@@ -5,8 +5,8 @@ dependencies:
     specifier: ^0.12.2
     version: 0.12.2
   '@effect/io':
-    specifier: ^0.25.8
-    version: 0.25.8
+    specifier: ^0.25.9
+    version: 0.25.9
 
 devDependencies:
   '@changesets/cli':
@@ -339,8 +339,8 @@ packages:
     resolution: {integrity: sha512-bmWRTcsSRG1FlBswT+D8SxW6r3c4B3pKJrjYfitCD03tXHnup5gLHaWqbFgIjiyYITS+UsJRRjVrNxvyGG4ZNQ==}
     dev: false
 
-  /@effect/io@0.25.8:
-    resolution: {integrity: sha512-fFSf7CdKyqqRyRKIFKoWx63sO1tGDjDIs26Ce+UevD3V/HbT0sKmG2MBThWoO5D2/tWEqwmq8+a/og6gq8KX4w==}
+  /@effect/io@0.25.9:
+    resolution: {integrity: sha512-RvW3l7A7PpPb74xwegxVKL5S+Zt+oA73fimSI7GunwaRk/OpI942BKdMczW1xN2sV5EME6jernAVAhKdncxM9Q==}
     dependencies:
       '@effect/data': 0.12.2
     dev: false
@@ -653,8 +653,8 @@ packages:
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
     dev: true
 
-  /@types/node@20.1.0:
-    resolution: {integrity: sha512-O+z53uwx64xY7D6roOi4+jApDGFg0qn6WHcxe5QeqjMaTezBO/mxdfFXIVAVVyNWKx84OmPB3L8kbVYOTeN34A==}
+  /@types/node@20.1.2:
+    resolution: {integrity: sha512-CTO/wa8x+rZU626cL2BlbCDzydgnFNgc19h4YvizpTO88MFQxab8wqisxaofQJ/9bLGugRdWIuX/TbIs6VVF6g==}
     dev: true
 
   /@types/normalize-package-data@2.4.1:
@@ -1774,8 +1774,8 @@ packages:
     engines: {node: '>= 8.0.0'}
     dev: true
 
-  /mlly@1.2.0:
-    resolution: {integrity: sha512-+c7A3CV0KGdKcylsI6khWyts/CYrGTrRVo4R/I7u/cUsy0Conxa6LUhiEzVKIw14lc2L5aiO4+SeVe4TeGRKww==}
+  /mlly@1.2.1:
+    resolution: {integrity: sha512-1aMEByaWgBPEbWV2BOPEMySRrzl7rIHXmQxam4DM8jVjalTQDjpN2ZKOLUrwyhfZQO7IXHml2StcHMhooDeEEQ==}
     dependencies:
       acorn: 8.8.2
       pathe: 1.1.0
@@ -1939,7 +1939,7 @@ packages:
     resolution: {integrity: sha512-nN7pYi0AQqJnoLPC9eHFQ8AcyaixBUOwvqc5TDnIKCMEE6I0y8P7OKA7fPexsXGCGxQDl/cmrLAp26LhcwxZ4A==}
     dependencies:
       jsonc-parser: 3.2.0
-      mlly: 1.2.0
+      mlly: 1.2.1
       pathe: 1.1.0
     dev: true
 
@@ -2072,8 +2072,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /rollup@3.21.5:
-    resolution: {integrity: sha512-a4NTKS4u9PusbUJcfF4IMxuqjFzjm6ifj76P54a7cKnvVzJaG12BLVR+hgU2YDGHzyMMQNxLAZWuALsn8q2oQg==}
+  /rollup@3.21.6:
+    resolution: {integrity: sha512-SXIICxvxQxR3D4dp/3LDHZIJPC8a4anKMHd4E3Jiz2/JnY+2bEjqrOokAauc5ShGVNFHlEFjBXAXlaxkJqIqSg==}
     engines: {node: '>=14.18.0', npm: '>=8.0.0'}
     hasBin: true
     optionalDependencies:
@@ -2440,17 +2440,17 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-node@0.31.0(@types/node@20.1.0):
+  /vite-node@0.31.0(@types/node@20.1.2):
     resolution: {integrity: sha512-8x1x1LNuPvE2vIvkSB7c1mApX5oqlgsxzHQesYF7l5n1gKrEmrClIiZuOFbFDQcjLsmcWSwwmrWrcGWm9Fxc/g==}
     engines: {node: '>=v14.18.0'}
     hasBin: true
     dependencies:
       cac: 6.7.14
       debug: 4.3.4
-      mlly: 1.2.0
+      mlly: 1.2.1
       pathe: 1.1.0
       picocolors: 1.0.0
-      vite: 4.3.5(@types/node@20.1.0)
+      vite: 4.3.5(@types/node@20.1.2)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -2461,7 +2461,7 @@ packages:
       - terser
     dev: true
 
-  /vite@4.3.5(@types/node@20.1.0):
+  /vite@4.3.5(@types/node@20.1.2):
     resolution: {integrity: sha512-0gEnL9wiRFxgz40o/i/eTBwm+NEbpUeTWhzKrZDSdKm6nplj+z4lKz8ANDgildxHm47Vg8EUia0aicKbawUVVA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -2486,10 +2486,10 @@ packages:
       terser:
         optional: true
     dependencies:
-      '@types/node': 20.1.0
+      '@types/node': 20.1.2
       esbuild: 0.17.18
       postcss: 8.4.23
-      rollup: 3.21.5
+      rollup: 3.21.6
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
@@ -2527,7 +2527,7 @@ packages:
     dependencies:
       '@types/chai': 4.3.5
       '@types/chai-subset': 1.3.3
-      '@types/node': 20.1.0
+      '@types/node': 20.1.2
       '@vitest/expect': 0.31.0
       '@vitest/runner': 0.31.0
       '@vitest/snapshot': 0.31.0
@@ -2547,8 +2547,8 @@ packages:
       strip-literal: 1.0.1
       tinybench: 2.5.0
       tinypool: 0.5.0
-      vite: 4.3.5(@types/node@20.1.0)
-      vite-node: 0.31.0(@types/node@20.1.0)
+      vite: 4.3.5(@types/node@20.1.2)
+      vite-node: 0.31.0(@types/node@20.1.2)
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
       - less
