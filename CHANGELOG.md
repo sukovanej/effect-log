@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.2.3
+
+### Patch Changes
+
+- 3cc2bb9: Update /io.
+
 ## 0.2.2
 
 ### Patch Changes
