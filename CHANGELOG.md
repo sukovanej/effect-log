@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.2.5
+
+### Patch Changes
+
+- 85e189e: Update dependencies.
+
 ## 0.2.4
 
 ### Patch Changes
