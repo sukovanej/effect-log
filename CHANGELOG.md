@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.2
+
+### Patch Changes
+
+- 5a73c50: Fix package.json exports.
+
 ## 0.3.1
 
 ### Patch Changes
