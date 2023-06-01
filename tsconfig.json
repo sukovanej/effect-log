@@ -8,7 +8,15 @@
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "skipLibCheck": true,
-    "types": ["vitest/globals"]
+    "types": ["vitest/globals"],
+    "paths": {
+      "effect-log": [
+        "./src/index.ts"
+      ],
+      "effect-log/*": [
+        "./src/*"
+      ]
+    }
   },
   "include": [
     "src",

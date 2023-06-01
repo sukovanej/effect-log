@@ -4,4 +4,9 @@ export default defineConfig({
   test: {
     globals: true,
   },
+  resolve: {
+    alias: {
+      "effect-log": path.resolve(__dirname, "/src"),
+    },
+  },
 });
