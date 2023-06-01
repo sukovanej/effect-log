@@ -5,6 +5,11 @@
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
   "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
     "./*": {
       "import": {
         "types": "./dist/*.d.ts",
