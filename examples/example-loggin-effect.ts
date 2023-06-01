@@ -1,5 +1,7 @@
 import { pipe } from "@effect/data/Function";
 import * as Effect from "@effect/io/Effect";
+import * as Logger from "@effect/io/Logger";
+import * as LoggerLevel from "@effect/io/Logger/Level";
 
 export const exampleEffect = pipe(
   Effect.log("Hello world"),
@@ -24,4 +26,5 @@ export const exampleEffect = pipe(
   Effect.logAnnotate("myName", "Earl"),
   Effect.tap(() => Effect.logDebug("Sooo sad, not annotations for me")),
   Effect.tap(() => Effect.logTrace("Never Gonna Give You Up")),
+  Effect.provideSomeLayer(Logger.minimumLogLevel(LoggerLevel.All)),
 );
