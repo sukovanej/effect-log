@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.1
+
+### Patch Changes
+
+- ade35be: Fix imports.
+
 ## 0.3.0
 
 ### Minor Changes
