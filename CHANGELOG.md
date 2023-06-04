@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.4
+
+### Patch Changes
+
+- 1ccfdf5: Update dependencies.
+
 ## 0.3.3
 
 ### Patch Changes
