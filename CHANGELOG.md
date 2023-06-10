@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.5
+
+### Patch Changes
+
+- 27c87bd: Update /data.
+
 ## 0.3.4
 
 ### Patch Changes
