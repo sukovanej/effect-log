@@ -43,7 +43,7 @@
     "vitest": "^0.32.0"
   },
   "dependencies": {
-    "@effect/data": "^0.12.5",
+    "@effect/data": "^0.12.6",
     "@effect/io": "^0.26.0"
   }
 }
