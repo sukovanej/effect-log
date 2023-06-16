@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.6
+
+### Patch Changes
+
+- b7072d3: Update dependencies.
+
 ## 0.3.5
 
 ### Patch Changes
