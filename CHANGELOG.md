@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.7
+
+### Patch Changes
+
+- c710572: Remove unnecessary files from the build.
+
 ## 0.3.6
 
 ### Patch Changes
