@@ -6,11 +6,11 @@ settings:
 
 dependencies:
   '@effect/data':
-    specifier: ^0.12.7
-    version: 0.12.7
+    specifier: ^0.12.8
+    version: 0.12.8
   '@effect/io':
-    specifier: ^0.26.0
-    version: 0.26.0
+    specifier: ^0.26.1
+    version: 0.26.1
 
 devDependencies:
   '@changesets/cli':
@@ -342,14 +342,14 @@ packages:
       prettier: 2.8.8
     dev: true
 
-  /@effect/data@0.12.7:
-    resolution: {integrity: sha512-f/NRMyxOIPnxz2kRxUbSv0UFeELjruI+yqMpuoGKbmd3Ji5DP2SAQNF0LXESuZ0AucqRdxKT6odyjuAOZBXyKA==}
+  /@effect/data@0.12.8:
+    resolution: {integrity: sha512-Wm5tOFHrgKreMp0NCveNfGDOnTcufZGDCXYIDHBI/hqlTujbigi3DZpDm4pf4DfUhnY5JAh0pisSyjnWw5gVFg==}
     dev: false
 
-  /@effect/io@0.26.0:
-    resolution: {integrity: sha512-umwZ/sRoV7zb/8WwoiK7xWoypqvY6C1EXWEGORpViAFUTx3/bXc9i7JtdttTWVokXb3qogrxGX2SHopB20I4vQ==}
+  /@effect/io@0.26.1:
+    resolution: {integrity: sha512-HBVgiVOqZFgYXQ5DlJHL3DCZRRO5osmlS3TdtCjlWtncqlbxqKpEkwwJbz5hbZSsNwC1O6X6kclGvjw97X+AzQ==}
     dependencies:
-      '@effect/data': 0.12.7
+      '@effect/data': 0.12.8
     dev: false
 
   /@esbuild-kit/cjs-loader@2.4.2:
