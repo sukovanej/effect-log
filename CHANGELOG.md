@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.8
+
+### Patch Changes
+
+- aae9614: Update dependencies.
+
 ## 0.3.7
 
 ### Patch Changes
