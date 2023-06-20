@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.9
+
+### Patch Changes
+
+- 1df66af: Update dependencies.
+
 ## 0.3.8
 
 ### Patch Changes
