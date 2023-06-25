@@ -1,5 +1,12 @@
 # effect-log
 
+## 0.3.10
+
+### Patch Changes
+
+- 31f1b60: Update dependencies
+- e2be6c8: Fix logger type.
+
 ## 0.3.9
 
 ### Patch Changes
