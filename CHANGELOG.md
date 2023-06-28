@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.3.11
+
+### Patch Changes
+
+- fdfc549: Update dependencies.
+
 ## 0.3.10
 
 ### Patch Changes
