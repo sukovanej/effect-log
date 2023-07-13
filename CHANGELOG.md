@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.4.0
+
+### Minor Changes
+
+- a94cc12: Update dependencies.
+
 ## 0.3.11
 
 ### Patch Changes
