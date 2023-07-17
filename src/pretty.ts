@@ -41,11 +41,10 @@ export const pretty = Logger.make<string, void>(
     console.log(`${timeText} ${fiberText} ${logLevelStr} ${message}`);
 
     if (!HashMap.isEmpty(annotations)) {
-      const text = HashMap.reduceWithIndex(
-        annotations,
-        [] as string[],
-        (acc, v, k) => [...acc, `${WHITE}"${k}"${RESET}: "${v}"`],
-      );
+      const text = HashMap.reduce(annotations, [] as string[], (acc, v, k) => [
+        ...acc,
+        `${WHITE}"${k}"${RESET}: "${v}"`,
+      ]);
       console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
     }
   },

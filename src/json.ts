@@ -4,7 +4,7 @@ import * as Logger from "@effect/io/Logger";
 
 export const json = (messageField?: string) =>
   Logger.make(({ fiberId, logLevel, message, annotations }) => {
-    const tags: Record<string, unknown> = HashMap.reduceWithIndex(
+    const tags: Record<string, unknown> = HashMap.reduce(
       annotations,
       {},
       (acc, v, k) => ({
