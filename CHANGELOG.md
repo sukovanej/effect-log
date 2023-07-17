@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.5.0
+
+### Minor Changes
+
+- 5bc0a98: Update dependencies.
+
 ## 0.4.0
 
 ### Minor Changes
