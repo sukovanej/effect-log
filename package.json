@@ -1,6 +1,6 @@
 {
   "name": "effect-log",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "",
   "main": "dist/index.cjs",
   "types": "dist/index.d.ts",
