@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.6.0
+
+### Minor Changes
+
+- 627bd74: Update /data and /io.
+
 ## 0.5.0
 
 ### Minor Changes
