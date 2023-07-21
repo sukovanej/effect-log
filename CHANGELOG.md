@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.6.2
+
+### Patch Changes
+
+- a924977: Update /data and /io.
+
 ## 0.6.1
 
 ### Patch Changes
