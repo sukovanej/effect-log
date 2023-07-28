@@ -3,6 +3,8 @@ import { threadName } from "@effect/io/Fiber/Id";
 import * as Logger from "@effect/io/Logger";
 import { LogLevel } from "@effect/io/Logger/Level";
 
+import { serializeUnknown } from "effect-log/internal";
+
 const RESET = "\x1b[0m";
 const DIM = "\x1b[2m";
 const BOLD = "\x1b[1m";
@@ -23,7 +25,7 @@ const SEVERITY_TO_COLOR: Record<LogLevel["_tag"], string> = {
   Warning: YELLOW,
 };
 
-export const pretty = Logger.make<string, void>(
+export const pretty = Logger.make<string, unknown>(
   ({ fiberId, logLevel, message, annotations }) => {
     const logLevelColor = SEVERITY_TO_COLOR[logLevel._tag];
     const logLevelText = logLevel.label.padEnd(5, " ");
@@ -38,7 +40,9 @@ export const pretty = Logger.make<string, void>(
     const thread = threadName(fiberId);
     const fiberText = `${DIM}(Fiber ${thread})${RESET}`;
 
-    console.log(`${timeText} ${fiberText} ${logLevelStr} ${message}`);
+    const text = serializeUnknown(message);
+
+    console.log(`${timeText} ${fiberText} ${logLevelStr} ${text}`);
 
     if (!HashMap.isEmpty(annotations)) {
       const text = HashMap.reduce(annotations, [] as string[], (acc, v, k) => [
