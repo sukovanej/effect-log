@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.8.1
+
+### Patch Changes
+
+- 801ba1d: Fix pretty logger type.
+
 ## 0.8.0
 
 ### Minor Changes
