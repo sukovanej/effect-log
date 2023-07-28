@@ -6,7 +6,7 @@ import * as LoggerLevel from "@effect/io/Logger/Level";
 export const exampleEffect = pipe(
   Effect.log("Hello world"),
   Effect.tap(() =>
-    pipe(Effect.logDebug("Im here"), Effect.logSpan("span-label-1")),
+    pipe(Effect.logDebug("Im here"), Effect.withLogSpan("span-label-1")),
   ),
   Effect.tap(() =>
     pipe(
