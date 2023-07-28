@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.7.0
+
+### Minor Changes
+
+- b4aadd2: Update /data and /io.
+
 ## 0.6.5
 
 ### Patch Changes
