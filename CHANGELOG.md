@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.8.0
+
+### Minor Changes
+
+- ef91d1f: Make loggers accept `unknown`.
+
 ## 0.7.0
 
 ### Minor Changes
