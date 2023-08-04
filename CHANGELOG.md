@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.10.0
+
+### Minor Changes
+
+- 593a5da: Update /io.
+
 ## 0.9.0
 
 ### Minor Changes
