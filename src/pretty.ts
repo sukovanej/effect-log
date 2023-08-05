@@ -1,4 +1,8 @@
+import { pipe } from "@effect/data/Function";
 import * as HashMap from "@effect/data/HashMap";
+import * as ReadonlyArray from "@effect/data/ReadonlyArray";
+import * as Struct from "@effect/data/Struct";
+import * as Cause from "@effect/io/Cause";
 import { threadName } from "@effect/io/Fiber/Id";
 import type * as Layer from "@effect/io/Layer";
 import * as Logger from "@effect/io/Logger";
@@ -36,12 +40,32 @@ const defaultOptions: PrettyLoggerOptions = {
   showTime: true,
 };
 
-const createTimeString = () => {
-  const now = new Date();
-  const hoursText = now.getHours().toString().padStart(2, "0");
-  const minutesText = now.getMinutes().toString().padStart(2, "0");
-  const secondsText = now.getSeconds().toString().padStart(2, "0");
+const createTimeString = (date: Date) => {
+  const hoursText = date.getHours().toString().padStart(2, "0");
+  const minutesText = date.getMinutes().toString().padStart(2, "0");
+  const secondsText = date.getSeconds().toString().padStart(2, "0");
   return `${YELLOW}${hoursText}:${minutesText}:${secondsText}${RESET}`;
+};
+
+const createCauseMessage = (cause: Cause.Cause<unknown>) => {
+  const format = (error: unknown) =>
+    `Cause(${cause._tag}): ${serializeUnknown(error)}`;
+
+  if (cause._tag === "Die") {
+    return format(cause.defect);
+  } else if (cause._tag === "Fail") {
+    return format(cause.error);
+  } else if (cause._tag === "Interrupt") {
+    return format(cause.fiberId);
+  } else if (cause._tag === "Parallel") {
+    return format(pipe(cause, Struct.pick("left", "right")));
+  } else if (cause._tag === "Annotated") {
+    return format(pipe(cause, Struct.pick("cause", "annotation")));
+  } else if (cause._tag === "Sequential") {
+    return format(pipe(cause, Struct.pick("left", "right")));
+  }
+
+  return "";
 };
 
 const createLogLevelString = (logLevel: LoggerLevel.LogLevel) => {
@@ -50,17 +74,24 @@ const createLogLevelString = (logLevel: LoggerLevel.LogLevel) => {
   return `${logLevelColor}${logLevelText}${RESET}`;
 };
 
+const createText = (message: unknown, cause: Cause.Cause<unknown>) =>
+  pipe(
+    [createCauseMessage(cause), serializeUnknown(message)],
+    ReadonlyArray.filter((i) => i !== ""),
+    ReadonlyArray.join(" "),
+  );
+
 export const pretty = (options?: Partial<PrettyLoggerOptions>) =>
-  Logger.make(({ fiberId, logLevel, message, annotations }) => {
+  Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
     const _options = { ...defaultOptions, ...options };
 
     const logLevelStr = createLogLevelString(logLevel);
-    const timeText = _options.showTime ? `${createTimeString()} ` : "";
+    const timeText = _options.showTime ? `${createTimeString(date)} ` : "";
     const fiberText = _options?.showFiberId
       ? `${DIM}(Fiber ${threadName(fiberId)})${RESET} `
       : "";
 
-    const text = serializeUnknown(message);
+    const text = createText(message, cause);
 
     console.log(`${timeText}${fiberText}${logLevelStr} ${text}`);
 

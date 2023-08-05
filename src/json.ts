@@ -6,7 +6,7 @@ import * as Logger from "@effect/io/Logger";
 import { serializeUnknown } from "effect-log/internal";
 
 export const json = (messageField?: string) =>
-  Logger.make(({ fiberId, logLevel, message, annotations }) => {
+  Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
     const tags: Record<string, unknown> = HashMap.reduce(
       annotations,
       {},
@@ -16,9 +16,14 @@ export const json = (messageField?: string) =>
       }),
     );
 
+    tags["date"] = date;
     tags["logLevel"] = logLevel.label;
     tags[messageField ?? "message"] = serializeUnknown(message);
     tags["fiberId"] = threadName(fiberId);
+
+    if (cause._tag !== "Empty") {
+      tags["cause"] = cause;
+    }
 
     console.log(JSON.stringify(tags));
   });
