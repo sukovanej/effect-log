@@ -26,24 +26,43 @@ const SEVERITY_TO_COLOR: Record<LoggerLevel.LogLevel["_tag"], string> = {
   Warning: YELLOW,
 };
 
-export const pretty = Logger.make(
-  ({ fiberId, logLevel, message, annotations }) => {
-    const logLevelColor = SEVERITY_TO_COLOR[logLevel._tag];
-    const logLevelText = logLevel.label.padEnd(5, " ");
-    const logLevelStr = `${logLevelColor}${logLevelText}${RESET}`;
+interface PrettyLoggerOptions {
+  showFiberId: boolean;
+  showTime: boolean;
+}
 
-    const now = new Date();
-    const hoursText = now.getHours().toString().padStart(2, "0");
-    const minutesText = now.getMinutes().toString().padStart(2, "0");
-    const secondsText = now.getSeconds().toString().padStart(2, "0");
-    const timeText = `${YELLOW}${hoursText}:${minutesText}:${secondsText}${RESET}`;
+const defaultOptions: PrettyLoggerOptions = {
+  showFiberId: true,
+  showTime: true,
+};
 
-    const thread = threadName(fiberId);
-    const fiberText = `${DIM}(Fiber ${thread})${RESET}`;
+const createTimeString = () => {
+  const now = new Date();
+  const hoursText = now.getHours().toString().padStart(2, "0");
+  const minutesText = now.getMinutes().toString().padStart(2, "0");
+  const secondsText = now.getSeconds().toString().padStart(2, "0");
+  return `${YELLOW}${hoursText}:${minutesText}:${secondsText}${RESET}`;
+};
+
+const createLogLevelString = (logLevel: LoggerLevel.LogLevel) => {
+  const logLevelColor = SEVERITY_TO_COLOR[logLevel._tag];
+  const logLevelText = logLevel.label.padEnd(5, " ");
+  return `${logLevelColor}${logLevelText}${RESET}`;
+};
+
+export const pretty = (options?: Partial<PrettyLoggerOptions>) =>
+  Logger.make(({ fiberId, logLevel, message, annotations }) => {
+    const _options = { ...defaultOptions, ...options };
+
+    const logLevelStr = createLogLevelString(logLevel);
+    const timeText = _options.showTime ? `${createTimeString()} ` : "";
+    const fiberText = _options?.showFiberId
+      ? `${DIM}(Fiber ${threadName(fiberId)})${RESET} `
+      : "";
 
     const text = serializeUnknown(message);
 
-    console.log(`${timeText} ${fiberText} ${logLevelStr} ${text}`);
+    console.log(`${timeText}${fiberText}${logLevelStr} ${text}`);
 
     if (!HashMap.isEmpty(annotations)) {
       const text = HashMap.reduce(annotations, [] as string[], (acc, v, k) => [
@@ -52,10 +71,9 @@ export const pretty = Logger.make(
       ]);
       console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
     }
-  },
-);
+  });
 
-export const setPrettyLogger: Layer.Layer<never, never, never> = Logger.replace(
-  Logger.defaultLogger,
-  pretty,
-);
+export const setPrettyLogger: (
+  options?: Partial<PrettyLoggerOptions>,
+) => Layer.Layer<never, never, never> = (options) =>
+  Logger.replace(Logger.defaultLogger, pretty(options));
