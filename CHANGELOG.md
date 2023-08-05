@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.11.0
+
+### Minor Changes
+
+- cf02461: Publish dist folder. Use /io and /data as peer dependencies.
+
 ## 0.10.0
 
 ### Minor Changes
