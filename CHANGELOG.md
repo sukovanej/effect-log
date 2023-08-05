@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.12.1
+
+### Patch Changes
+
+- 7691d3b: Use date from logger input and propagate cause to the output.
+
 ## 0.12.0
 
 ### Minor Changes
