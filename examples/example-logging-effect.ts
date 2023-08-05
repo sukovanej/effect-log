@@ -27,4 +27,6 @@ export const exampleEffect = pipe(
   Effect.tap(() => Effect.logDebug("Sooo sad, not annotations for me")),
   Effect.tap(() => Effect.logTrace("Never Gonna Give You Up")),
   Effect.provideSomeLayer(Logger.minimumLogLevel(LoggerLevel.All)),
+  Effect.flatMap(() => Effect.dieMessage("Aaaand it's gone")),
+  Effect.tapErrorCause(Effect.logError),
 );
