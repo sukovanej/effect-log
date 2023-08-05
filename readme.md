@@ -4,18 +4,21 @@ Logging batteris for effect-ts.
 
 ## [Pretty logger](examples/pretty-logger.ts)
 
-Use `Log.pretty` to get the pretty logger.
+Use `Log.pretty` to get the pretty logger or `Log.setPrettyLogger` to
+obtaina layer replacing the default logger. Optionally, use the argument
+to configure what information gets propagated to the output.
 
 ```typescript
 import * as Log from "effect-log";
 
 import { pipe } from "@effect/data/Function";
 import * as Effect from "@effect/io/Effect";
-import * as Logger from "@effect/io/Logger";
 
-const effectWithPrettylogger = pipe(
-  someEffect,
-  Effect.provideLayer(Logger.replace(Logger.defaultLogger, Log.pretty)),
+pipe(
+  exampleEffect,
+  Effect.provideLayer(
+    Log.setPrettyLogger({ showFiberId: false, showTime: false }),
+  ),
   Effect.runSync,
 );
 ```
@@ -24,19 +27,19 @@ const effectWithPrettylogger = pipe(
 
 ## [JSON logger](examples/json-logger.ts)
 
-Use `Log.json()` to get the pretty logger. Optionally, the function accepts
-a string argument specifying a name of the message field.
+Use `Log.json()` to get the pretty logger or `Log.setJsonLogger()` to
+obtain a layer replacing the default loggger. Optionally, specify a name
+of the message field by the input argument.
 
 ```typescript
 import * as Log from "effect-log";
 
 import { pipe } from "@effect/data/Function";
 import * as Effect from "@effect/io/Effect";
-import * as Logger from "@effect/io/Logger";
 
-const effectWithJsonLogger = pipe(
-  someEffect,
-  Effect.provideLayer(Logger.replace(Logger.defaultLogger, Log.json())),
+pipe(
+  exampleEffect,
+  Effect.provideSomeLayer(Log.setJsonLogger()),
   Effect.runSync,
 );
 ```
