@@ -1,7 +1,8 @@
 import * as HashMap from "@effect/data/HashMap";
 import { threadName } from "@effect/io/Fiber/Id";
+import type * as Layer from "@effect/io/Layer";
 import * as Logger from "@effect/io/Logger";
-import { LogLevel } from "@effect/io/Logger/Level";
+import type * as LoggerLevel from "@effect/io/Logger/Level";
 
 import { serializeUnknown } from "effect-log/internal";
 
@@ -14,7 +15,7 @@ const YELLOW = "\x1b[33m";
 const BLUE = "\x1b[34m";
 const WHITE = "\x1b[37m";
 
-const SEVERITY_TO_COLOR: Record<LogLevel["_tag"], string> = {
+const SEVERITY_TO_COLOR: Record<LoggerLevel.LogLevel["_tag"], string> = {
   All: WHITE,
   None: WHITE,
   Info: GREEN,
@@ -52,4 +53,9 @@ export const pretty = Logger.make(
       console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
     }
   },
+);
+
+export const setPrettyLogger: Layer.Layer<never, never, never> = Logger.replace(
+  Logger.defaultLogger,
+  pretty,
 );
