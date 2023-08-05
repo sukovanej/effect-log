@@ -1,29 +1,33 @@
 {
   "name": "effect-log",
   "version": "0.10.0",
-  "description": "",
-  "main": "dist/index.cjs",
-  "types": "dist/index.d.ts",
+  "description": "Logging batteris for effect-ts",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  },
+  "type": "module",
+  "main": "index.cjs",
+  "types": "index.d.ts",
   "exports": {
     ".": {
-      "require": "./dist/index.cjs",
-      "import": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "require": "./index.cjs",
+      "import": "./index.js",
+      "types": "./index.d.ts"
     },
     "./*": {
       "import": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.js"
+        "types": "./*.d.ts",
+        "default": "./*.js"
       },
       "require": {
-        "types": "./dist/*.d.ts",
-        "default": "./dist/*.cjs"
+        "types": "./*.d.ts",
+        "default": "./*.cjs"
       }
     }
   },
-  "type": "module",
   "scripts": {
-    "build": "tsup",
+    "build": "tsup && cp package.json dist/ && cp readme.md dist/",
     "watch": "tsc -w -p tsconfig.json",
     "format": "prettier -w src tests examples",
     "lint": "prettier src tests examples --check",
@@ -35,6 +39,8 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
+    "@effect/data": "^0.17.1",
+    "@effect/io": "^0.38.0",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
     "prettier": "^3.0.1",
     "tsup": "^7.2.0",
@@ -42,7 +48,7 @@
     "typescript": "^5.1.6",
     "vitest": "^0.34.1"
   },
-  "dependencies": {
+  "peerDependencies": {
     "@effect/data": "^0.17.1",
     "@effect/io": "^0.38.0"
   }
