@@ -5,4 +5,10 @@ import * as Effect from "@effect/io/Effect";
 
 import { exampleEffect } from "./example-logging-effect";
 
-pipe(exampleEffect, Effect.provideLayer(Log.setPrettyLogger), Effect.runSync);
+pipe(
+  exampleEffect,
+  Effect.provideLayer(
+    Log.setPrettyLogger({ showFiberId: false, showTime: false }),
+  ),
+  Effect.runSync,
+);
