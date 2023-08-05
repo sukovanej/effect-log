@@ -1,5 +1,12 @@
 # effect-log
 
+## 0.12.0
+
+### Minor Changes
+
+- 16a1175: Expose layers.
+- 43fbe40: Pretty logger accepts options that configure whether to display datetime and fiberId.
+
 ## 0.11.0
 
 ### Minor Changes
