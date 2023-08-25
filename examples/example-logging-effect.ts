@@ -1,7 +1,4 @@
-import { pipe } from "@effect/data/Function";
-import * as Effect from "@effect/io/Effect";
-import * as Logger from "@effect/io/Logger";
-import * as LoggerLevel from "@effect/io/Logger/Level";
+import { Effect, Logger, LoggerLevel, pipe } from "effect";
 
 export const exampleEffect = pipe(
   Effect.log("Hello world"),

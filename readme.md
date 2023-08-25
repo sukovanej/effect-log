@@ -9,10 +9,8 @@ obtaina layer replacing the default logger. Optionally, use the argument
 to configure what information gets propagated to the output.
 
 ```typescript
+import { Effect, pipe } from "effect";
 import * as Log from "effect-log";
-
-import { pipe } from "@effect/data/Function";
-import * as Effect from "@effect/io/Effect";
 
 pipe(
   exampleEffect,
@@ -32,10 +30,8 @@ obtain a layer replacing the default loggger. Optionally, specify a name
 of the message field by the input argument.
 
 ```typescript
+import { Effect, pipe } from "effect";
 import * as Log from "effect-log";
-
-import { pipe } from "@effect/data/Function";
-import * as Effect from "@effect/io/Effect";
 
 pipe(
   exampleEffect,
