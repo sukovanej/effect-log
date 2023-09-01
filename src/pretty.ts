@@ -1,12 +1,13 @@
+import { threadName } from "effect/FiberId";
+
 import { pipe } from "@effect/data/Function";
 import * as HashMap from "@effect/data/HashMap";
 import * as ReadonlyArray from "@effect/data/ReadonlyArray";
 import * as Struct from "@effect/data/Struct";
 import * as Cause from "@effect/io/Cause";
-import { threadName } from "@effect/io/Fiber/Id";
 import type * as Layer from "@effect/io/Layer";
+import type * as LogLevel from "@effect/io/LogLevel";
 import * as Logger from "@effect/io/Logger";
-import type * as LoggerLevel from "@effect/io/Logger/Level";
 
 import { serializeUnknown } from "effect-log/internal";
 
@@ -19,7 +20,7 @@ const YELLOW = "\x1b[33m";
 const BLUE = "\x1b[34m";
 const WHITE = "\x1b[37m";
 
-const SEVERITY_TO_COLOR: Record<LoggerLevel.LogLevel["_tag"], string> = {
+const SEVERITY_TO_COLOR: Record<LogLevel.LogLevel["_tag"], string> = {
   All: WHITE,
   None: WHITE,
   Info: GREEN,
@@ -68,7 +69,7 @@ const createCauseMessage = (cause: Cause.Cause<unknown>) => {
   return "";
 };
 
-const createLogLevelString = (logLevel: LoggerLevel.LogLevel) => {
+const createLogLevelString = (logLevel: LogLevel.LogLevel) => {
   const logLevelColor = SEVERITY_TO_COLOR[logLevel._tag];
   const logLevelText = logLevel.label.padEnd(5, " ");
   return `${logLevelColor}${logLevelText}${RESET}`;
