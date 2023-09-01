@@ -1,5 +1,5 @@
 import * as HashMap from "@effect/data/HashMap";
-import { threadName } from "@effect/io/Fiber/Id";
+import { threadName } from "@effect/io/FiberId";
 import type * as Layer from "@effect/io/Layer";
 import * as Logger from "@effect/io/Logger";
 
