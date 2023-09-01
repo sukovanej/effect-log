@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.13.0
+
+### Minor Changes
+
+- da14135: Update effect dependencies.
+
 ## 0.12.1
 
 ### Patch Changes
