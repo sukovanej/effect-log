@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.14.2
+
+### Patch Changes
+
+- 01adcff: Update /io.
+
 ## 0.14.1
 
 ### Patch Changes
