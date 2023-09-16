@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.16.0
+
+### Minor Changes
+
+- 485a1fb: Update API.
+
 ## 0.15.0
 
 ### Minor Changes
