@@ -1,11 +1,11 @@
 import { makeJsonLogger, setJsonLogger } from "effect-log/json";
 import { makePrettyLogger, setPrettyLogger } from "effect-log/pretty";
 
-export const Log = {
+const Log = {
   makeJsonLogger,
   setJsonLogger,
   makePrettyLogger,
   setPrettyLogger,
 };
 
-export namespace Log {}
+export default Log;
