@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.15.0
+
+### Minor Changes
+
+- d617a81: Update API.
+
 ## 0.14.2
 
 ### Patch Changes
