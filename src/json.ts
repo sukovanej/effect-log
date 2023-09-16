@@ -5,7 +5,7 @@ import * as Logger from "@effect/io/Logger";
 
 import { serializeUnknown } from "effect-log/internal";
 
-export const json = (messageField?: string) =>
+export const makeJsonLogger = (messageField?: string) =>
   Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
     const tags: Record<string, unknown> = HashMap.reduce(
       annotations,
@@ -31,4 +31,4 @@ export const json = (messageField?: string) =>
 export const setJsonLogger: (
   messageFields?: string,
 ) => Layer.Layer<never, never, never> = (messageField) =>
-  Logger.replace(Logger.defaultLogger, json(messageField));
+  Logger.replace(Logger.defaultLogger, makeJsonLogger(messageField));
