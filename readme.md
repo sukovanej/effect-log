@@ -10,7 +10,9 @@ to configure what information gets propagated to the output.
 
 ```typescript
 import { Effect, pipe } from "effect";
-import * as Log from "effect-log";
+import { Log } from "effect-log";
+
+import { exampleEffect } from "./example-logging-effect";
 
 pipe(
   exampleEffect,
@@ -31,7 +33,9 @@ of the message field by the input argument.
 
 ```typescript
 import { Effect, pipe } from "effect";
-import * as Log from "effect-log";
+import { Log } from "effect-log";
+
+import { exampleEffect } from "./example-logging-effect";
 
 pipe(
   exampleEffect,

@@ -31,7 +31,7 @@ const SEVERITY_TO_COLOR: Record<LogLevel.LogLevel["_tag"], string> = {
   Warning: YELLOW,
 };
 
-interface PrettyLoggerOptions {
+export interface PrettyLoggerOptions {
   showFiberId: boolean;
   showTime: boolean;
 }
@@ -82,7 +82,7 @@ const createText = (message: unknown, cause: Cause.Cause<unknown>) =>
     ReadonlyArray.join(" "),
   );
 
-export const pretty = (options?: Partial<PrettyLoggerOptions>) =>
+export const makePrettyLogger = (options?: Partial<PrettyLoggerOptions>) =>
   Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
     const _options = { ...defaultOptions, ...options };
 
@@ -108,4 +108,4 @@ export const pretty = (options?: Partial<PrettyLoggerOptions>) =>
 export const setPrettyLogger: (
   options?: Partial<PrettyLoggerOptions>,
 ) => Layer.Layer<never, never, never> = (options) =>
-  Logger.replace(Logger.defaultLogger, pretty(options));
+  Logger.replace(Logger.defaultLogger, makePrettyLogger(options));
