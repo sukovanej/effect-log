@@ -1,7 +1,4 @@
-import * as HashMap from "@effect/data/HashMap";
-import { threadName } from "@effect/io/FiberId";
-import type * as Layer from "@effect/io/Layer";
-import * as Logger from "@effect/io/Logger";
+import { FiberId, HashMap, Layer, Logger } from "effect";
 
 import { serializeUnknown } from "effect-log/internal";
 
@@ -19,7 +16,7 @@ export const makeJsonLogger = (messageField?: string) =>
     tags["date"] = date;
     tags["logLevel"] = logLevel.label;
     tags[messageField ?? "message"] = serializeUnknown(message);
-    tags["fiberId"] = threadName(fiberId);
+    tags["fiberId"] = FiberId.threadName(fiberId);
 
     if (cause._tag !== "Empty") {
       tags["cause"] = cause;

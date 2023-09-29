@@ -1,10 +1,6 @@
 import { Effect, pipe } from "effect";
-import Log from "effect-log";
+import { Log } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
-pipe(
-  exampleEffect,
-  Effect.provideSomeLayer(Log.setJsonLogger()),
-  Effect.runSync,
-);
+pipe(exampleEffect, Effect.provide(Log.setJsonLogger()), Effect.runSync);
