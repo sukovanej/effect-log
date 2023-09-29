@@ -39,18 +39,15 @@
   "license": "MIT",
   "devDependencies": {
     "@changesets/cli": "^2.26.2",
-    "@effect/data": "^0.18.5",
-    "@effect/io": "^0.40.3",
     "@trivago/prettier-plugin-sort-imports": "^4.2.0",
-    "effect": "2.0.0-next.34",
+    "effect": "2.0.0-next.39",
     "prettier": "^3.0.3",
     "tsup": "^7.2.0",
-    "tsx": "^3.12.10",
+    "tsx": "^3.13.0",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.4"
+    "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "@effect/data": "^0.18.5",
-    "@effect/io": "^0.40.3"
+    "effect": "2.0.0-next.39"
   }
 }
