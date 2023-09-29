@@ -12,14 +12,14 @@ devDependencies:
     specifier: ^0.18.5
     version: 0.18.5
   '@effect/io':
-    specifier: ^0.40.3
-    version: 0.40.3(@effect/data@0.18.5)
+    specifier: ^0.41.0
+    version: 0.41.2(@effect/data@0.18.5)
   '@trivago/prettier-plugin-sort-imports':
     specifier: ^4.2.0
     version: 4.2.0(prettier@3.0.3)
   effect:
     specifier: 2.0.0-next.34
-    version: 2.0.0-next.34(@effect/data@0.18.5)(@effect/io@0.40.3)(@effect/match@0.35.2)(@effect/stm@0.24.0)(@effect/stream@0.36.1)
+    version: 2.0.0-next.34(@effect/data@0.18.5)(@effect/io@0.41.2)(@effect/match@0.35.2)(@effect/stm@0.24.0)(@effect/stream@0.36.1)
   prettier:
     specifier: ^3.0.3
     version: 3.0.3
@@ -348,8 +348,8 @@ packages:
     resolution: {integrity: sha512-VFPJ0prGq3eF6/eZYKVI/1IC1purdGJXEHJC1ggKynPko03upjtmeCeCsEyMiY12DzVIAuME425JndiFb7m2xw==}
     dev: true
 
-  /@effect/io@0.40.3(@effect/data@0.18.5):
-    resolution: {integrity: sha512-bnHBFq1XzXn94x2w5FcXZz3MbY7N3YrhiI2CrncJr3WcGRDc2rCYIpPupw0JQGFcJsoopTj1BNfBuBR5s4/RyA==}
+  /@effect/io@0.41.2(@effect/data@0.18.5):
+    resolution: {integrity: sha512-kSMMQbowTPhUGQIo+B/5F6WWynY14IWr9avLAv4oaZ6PtjP+w8sOOdO0YU3a+idBaO12uIuvba2ZFR6LnASM6w==}
     peerDependencies:
       '@effect/data': ^0.18.5
     dependencies:
@@ -364,24 +364,24 @@ packages:
       '@effect/data': 0.18.5
     dev: true
 
-  /@effect/stm@0.24.0(@effect/data@0.18.5)(@effect/io@0.40.3):
+  /@effect/stm@0.24.0(@effect/data@0.18.5)(@effect/io@0.41.2):
     resolution: {integrity: sha512-6L4zhy2lvkxn3jMG7dvZ4lKOmxSvaNBpkIT/ZOS6mad+B5/r8G3bKFe0C70aHwpQkxORd9LVmFr/f5MXLKZtfQ==}
     peerDependencies:
       '@effect/data': ^0.18.3
       '@effect/io': ^0.40.0
     dependencies:
       '@effect/data': 0.18.5
-      '@effect/io': 0.40.3(@effect/data@0.18.5)
+      '@effect/io': 0.41.2(@effect/data@0.18.5)
     dev: true
 
-  /@effect/stream@0.36.1(@effect/data@0.18.5)(@effect/io@0.40.3):
+  /@effect/stream@0.36.1(@effect/data@0.18.5)(@effect/io@0.41.2):
     resolution: {integrity: sha512-gF/RzTBGgghCA+lcgYFkHW/ozozyOfx4hrGhKWspkjMXyc4B7p0E7dsHO14byTZtUD/JAXvrekvVX8uV7i8Zzw==}
     peerDependencies:
       '@effect/data': ^0.18.3
       '@effect/io': ^0.40.0
     dependencies:
       '@effect/data': 0.18.5
-      '@effect/io': 0.40.3(@effect/data@0.18.5)
+      '@effect/io': 0.41.2(@effect/data@0.18.5)
     dev: true
 
   /@esbuild-kit/cjs-loader@2.4.4:
@@ -1184,7 +1184,7 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /effect@2.0.0-next.34(@effect/data@0.18.5)(@effect/io@0.40.3)(@effect/match@0.35.2)(@effect/stm@0.24.0)(@effect/stream@0.36.1):
+  /effect@2.0.0-next.34(@effect/data@0.18.5)(@effect/io@0.41.2)(@effect/match@0.35.2)(@effect/stm@0.24.0)(@effect/stream@0.36.1):
     resolution: {integrity: sha512-7yX9IZK81ZZrdSX1zM/Iut1yTHbzbhmNVyQkztbU3X3ugCCsSi70/ZWzpeyLkk/O+JpPqf1lJKVLfdDFuOnV8Q==}
     peerDependencies:
       '@effect/data': ^0.18.5
@@ -1194,10 +1194,10 @@ packages:
       '@effect/stream': ^0.36.1
     dependencies:
       '@effect/data': 0.18.5
-      '@effect/io': 0.40.3(@effect/data@0.18.5)
+      '@effect/io': 0.41.2(@effect/data@0.18.5)
       '@effect/match': 0.35.2(@effect/data@0.18.5)
-      '@effect/stm': 0.24.0(@effect/data@0.18.5)(@effect/io@0.40.3)
-      '@effect/stream': 0.36.1(@effect/data@0.18.5)(@effect/io@0.40.3)
+      '@effect/stm': 0.24.0(@effect/data@0.18.5)(@effect/io@0.41.2)
+      '@effect/stream': 0.36.1(@effect/data@0.18.5)(@effect/io@0.41.2)
     dev: true
 
   /emoji-regex@8.0.0:
