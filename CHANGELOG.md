@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.17.0
+
+### Minor Changes
+
+- b6cf192: Update effect + `Log` export.
+
 ## 0.16.0
 
 ### Minor Changes
