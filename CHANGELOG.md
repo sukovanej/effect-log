@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.17.2
+
+### Patch Changes
+
+- f02a37a: Use `Cause.pretty` to print non-empty cause.
+
 ## 0.17.1
 
 ### Patch Changes
