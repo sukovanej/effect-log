@@ -6,7 +6,6 @@ import {
   LogLevel,
   Logger,
   ReadonlyArray,
-  Struct,
   pipe,
 } from "effect";
 
@@ -50,22 +49,10 @@ const createTimeString = (date: Date) => {
 };
 
 const createCauseMessage = (cause: Cause.Cause<unknown>) => {
-  const format = (error: unknown) =>
-    `Cause(${cause._tag}): ${serializeUnknown(error)}`;
-
-  if (cause._tag === "Die") {
-    return format(cause.defect);
-  } else if (cause._tag === "Fail") {
-    return format(cause.error);
-  } else if (cause._tag === "Interrupt") {
-    return format(cause.fiberId);
-  } else if (cause._tag === "Parallel") {
-    return format(pipe(cause, Struct.pick("left", "right")));
-  } else if (cause._tag === "Sequential") {
-    return format(pipe(cause, Struct.pick("left", "right")));
+  if (cause._tag === "Empty") {
+    return "";
   }
-
-  return "";
+  return Cause.pretty(cause);
 };
 
 const createLogLevelString = (logLevel: LogLevel.LogLevel) => {
