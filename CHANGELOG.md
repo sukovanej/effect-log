@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.17.1
+
+### Patch Changes
+
+- 7fc7470: Fix cause printing in pretty logger.
+
 ## 0.17.0
 
 ### Minor Changes
