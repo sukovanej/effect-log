@@ -1,4 +1,7 @@
-import { FiberId, HashMap, Layer, Logger } from "effect";
+import * as FiberId from "effect/FiberId";
+import * as HashMap from "effect/HashMap";
+import * as Layer from "effect/Layer";
+import * as Logger from "effect/Logger";
 
 import { serializeUnknown } from "effect-log/internal";
 

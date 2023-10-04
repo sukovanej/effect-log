@@ -1,13 +1,11 @@
-import {
-  Cause,
-  FiberId,
-  HashMap,
-  Layer,
-  LogLevel,
-  Logger,
-  ReadonlyArray,
-  pipe,
-} from "effect";
+import * as Cause from "effect/Cause";
+import * as FiberId from "effect/FiberId";
+import { pipe } from "effect/Function";
+import * as HashMap from "effect/HashMap";
+import * as Layer from "effect/Layer";
+import * as LogLevel from "effect/LogLevel";
+import * as Logger from "effect/Logger";
+import * as ReadonlyArray from "effect/ReadonlyArray";
 
 import { serializeUnknown } from "effect-log/internal";
 
