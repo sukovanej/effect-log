@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.18.2
+
+### Patch Changes
+
+- d443f60: Update effect peer dependency.
+
 ## 0.18.1
 
 ### Patch Changes
