@@ -10,6 +10,7 @@ export const exampleEffect = pipe(
       Effect.logError("Something's super fishy"),
       Effect.annotateLogs("life", "is awesome"),
       Effect.annotateLogs("sometimes", "not that awesome"),
+      Effect.annotateLogs("json", { value: 1, another: { hello: [3, 2, 1] } }),
     ),
   ),
   Effect.annotateLogs("rootCause", "milan"),

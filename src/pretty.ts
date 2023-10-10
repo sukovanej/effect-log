@@ -83,7 +83,7 @@ export const makePrettyLogger = (options?: Partial<PrettyLoggerOptions>) =>
     if (!HashMap.isEmpty(annotations)) {
       const text = HashMap.reduce(annotations, [] as string[], (acc, v, k) => [
         ...acc,
-        `${WHITE}"${k}"${RESET}: "${v}"`,
+        `${WHITE}"${k}"${RESET}: ${serializeUnknown(v)}`,
       ]);
       console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
     }
