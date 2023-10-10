@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.19.0
+
+### Minor Changes
+
+- 0a66310: Update effect. Enables arbitrary annotation values.
+
 ## 0.18.4
 
 ### Patch Changes
