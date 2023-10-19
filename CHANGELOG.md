@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.21.0
+
+### Minor Changes
+
+- 7084012: Update effect.
+
 ## 0.20.0
 
 ### Minor Changes
