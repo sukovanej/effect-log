@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.22.0
+
+### Minor Changes
+
+- 94c651a: Update effect.
+
 ## 0.21.0
 
 ### Minor Changes
