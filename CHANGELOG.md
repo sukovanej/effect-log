@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.22.1
+
+### Patch Changes
+
+- 814ff6b: Update effect.
+
 ## 0.22.0
 
 ### Minor Changes
