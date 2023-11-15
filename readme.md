@@ -10,16 +10,16 @@ to configure what information gets propagated to the output.
 
 ```typescript
 import { Effect, pipe } from "effect";
-import { Log } from "effect-log";
+import { PrettyLog } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
-const PrettyLogger = Log.setPrettyLogger({
+const logger = PrettyLog.layer({
   showFiberId: false,
   showTime: false,
 });
 
-pipe(exampleEffect, Effect.provide(PrettyLogger), Effect.runSync);
+pipe(exampleEffect, Effect.provide(logger), Effect.runSync);
 ```
 
 ![pretty](assets/pretty.png)
@@ -32,13 +32,13 @@ of the message field by the input argument.
 
 ```typescript
 import { Effect, pipe } from "effect";
-import { Log } from "effect-log";
+import { JsonLogger } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
-const JsonLogger = Log.setJsonLogger();
+const logger = JsonLogger.layer();
 
-pipe(exampleEffect, Effect.provide(JsonLogger), Effect.runSync);
+pipe(exampleEffect, Effect.provide(logger), Effect.runSync);
 ```
 
 ![json](assets/json.png)

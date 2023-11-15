@@ -66,7 +66,7 @@ const createText = (message: unknown, cause: Cause.Cause<unknown>) =>
     ReadonlyArray.join(" "),
   );
 
-export const makePrettyLogger = (options?: Partial<PrettyLoggerOptions>) =>
+export const make = (options?: Partial<PrettyLoggerOptions>) =>
   Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
     const _options = { ...defaultOptions, ...options };
 
@@ -89,7 +89,7 @@ export const makePrettyLogger = (options?: Partial<PrettyLoggerOptions>) =>
     }
   });
 
-export const setPrettyLogger: (
+export const layer: (
   options?: Partial<PrettyLoggerOptions>,
 ) => Layer.Layer<never, never, never> = (options) =>
-  Logger.replace(Logger.defaultLogger, makePrettyLogger(options));
+  Logger.replace(Logger.defaultLogger, make(options));
