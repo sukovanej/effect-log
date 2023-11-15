@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.23.0
+
+### Minor Changes
+
+- 87aae90: Update public modules. Update dependencies.
+
 ## 0.22.2
 
 ### Patch Changes
