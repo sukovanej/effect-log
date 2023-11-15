@@ -4,7 +4,7 @@ Logging batteris for effect-ts.
 
 ## [Pretty logger](examples/pretty-logger.ts)
 
-Use `Log.pretty` to get the pretty logger or `Log.setPrettyLogger` to
+Use `PrettyLogger.make` to create the pretty logger or `PrettyLogger.layer` to
 obtain a layer replacing the default logger. Optionally, use the argument
 to configure what information gets propagated to the output.
 
@@ -26,7 +26,7 @@ pipe(exampleEffect, Effect.provide(logger), Effect.runSync);
 
 ## [JSON logger](examples/json-logger.ts)
 
-Use `Log.json()` to get the pretty logger or `Log.setJsonLogger()` to
+Use `JsonLogger.make` to create the pretty logger or `JsonLogger.layer` to
 obtain a layer replacing the default loggger. Optionally, specify a name
 of the message field by the input argument.
 
