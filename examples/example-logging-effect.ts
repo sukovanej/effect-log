@@ -25,6 +25,15 @@ export const exampleEffect = pipe(
   Effect.tap(() => Effect.logDebug("Sooo sad, not annotations for me")),
   Effect.tap(() => Effect.logTrace("Never Gonna Give You Up")),
   Effect.provide(Logger.minimumLogLevel(LogLevel.All)),
-  Effect.flatMap(() => Effect.dieMessage("Aaaand it's gone")),
   Effect.tapErrorCause(Effect.logError),
+  Effect.flatMap(() =>
+    pipe(Effect.log(""), Effect.annotateLogs("likes", "fp-ts")),
+  ),
+  Effect.flatMap(() =>
+    pipe(Effect.log(undefined), Effect.annotateLogs("likes", "fp-ts")),
+  ),
+  Effect.flatMap(() =>
+    pipe(Effect.log(null), Effect.annotateLogs("likes", "fp-ts")),
+  ),
+  Effect.flatMap(() => Effect.dieMessage("Aaaand it's gone")),
 );

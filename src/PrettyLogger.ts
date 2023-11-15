@@ -59,9 +59,20 @@ const createLogLevelString = (logLevel: LogLevel.LogLevel) => {
   return `${logLevelColor}${logLevelText}${RESET}`;
 };
 
+const messageText = (message: unknown) => {
+  if (message === undefined) {
+    return `${DIM}undefined${RESET}`;
+  } else if (message === null) {
+    return `${DIM}null${RESET}`;
+  } else if (message === "") {
+    return `${DIM}<empty message>${RESET}`;
+  }
+  return serializeUnknown(message);
+};
+
 const createText = (message: unknown, cause: Cause.Cause<unknown>) =>
   pipe(
-    [createCauseMessage(cause), serializeUnknown(message)],
+    [createCauseMessage(cause), messageText(message)],
     ReadonlyArray.filter((i) => i !== ""),
     ReadonlyArray.join(" "),
   );
