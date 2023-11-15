@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.23.1
+
+### Patch Changes
+
+- 385ab30: Visualise empty string, null and undefined messages in PrettyLogger.
+
 ## 0.23.0
 
 ### Minor Changes
