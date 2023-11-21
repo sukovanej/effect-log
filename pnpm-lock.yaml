@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.1.0)
   effect:
-    specifier: 2.0.0-next.55
-    version: 2.0.0-next.55
+    specifier: 2.0.0-next.56
+    version: 2.0.0-next.56
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1426,8 +1426,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /effect@2.0.0-next.55:
-    resolution: {integrity: sha512-kNOB/HaDSdaFSDVXK2gyf4XcTKbKKlllyoS871uDyoJskcc+024sSOHnNioXZPgkqaz55a3mad4DFfLUIETwYQ==}
+  /effect@2.0.0-next.56:
+    resolution: {integrity: sha512-Z6L9rf78OveZorl4pC82hUM/kNhQ8epChuCBVNIjVsookbb6iqTuP9goi3qi6CR7xUZE+HnOKF2bzMIdOOP+Vw==}
     dev: true
 
   /emoji-regex@8.0.0:
