@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.23.2
+
+### Patch Changes
+
+- eb28d98: Update effect.
+
 ## 0.23.1
 
 ### Patch Changes
