@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.1.0)
   effect:
-    specifier: 2.0.0-next.56
-    version: 2.0.0-next.56
+    specifier: 2.0.0-next.57
+    version: 2.0.0-next.57
   prettier:
     specifier: ^3.1.0
     version: 3.1.0
@@ -1415,8 +1415,8 @@ packages:
       path-type: 4.0.0
     dev: true
 
-  /effect@2.0.0-next.56:
-    resolution: {integrity: sha512-Z6L9rf78OveZorl4pC82hUM/kNhQ8epChuCBVNIjVsookbb6iqTuP9goi3qi6CR7xUZE+HnOKF2bzMIdOOP+Vw==}
+  /effect@2.0.0-next.57:
+    resolution: {integrity: sha512-riZE0QZt/v7pko4TJj/px3uF2P72N2VufBkjadVxW0JNgBg769+L6TZ3RQtXjFFq/jAfgSJYDiQGNXWCZvHTuQ==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1467,7 +1467,7 @@ packages:
       is-weakref: 1.0.2
       object-inspect: 1.13.1
       object-keys: 1.1.1
-      object.assign: 4.1.4
+      object.assign: 4.1.5
       regexp.prototype.flags: 1.5.1
       safe-array-concat: 1.0.1
       safe-regex-test: 1.0.0
@@ -2328,8 +2328,8 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /object.assign@4.1.4:
-    resolution: {integrity: sha512-1mxKf0e58bvyjSCtKYY4sRe9itRk3PJpquJOjeIkz885CczcI4IvJJDLPS72oowuSh+pBxUFROpX+TU++hxhZQ==}
+  /object.assign@4.1.5:
+    resolution: {integrity: sha512-byy+U7gp+FVwmyzKPYhW2h5l3crpmGsxl7X2s8y43IgxvG4g3QZ6CffDtsNQy1WsmZpQbO+ybo0AlW7TY6DcBQ==}
     engines: {node: '>= 0.4'}
     dependencies:
       call-bind: 1.0.5
