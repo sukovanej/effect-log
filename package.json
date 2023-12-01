@@ -40,7 +40,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "effect": "2.0.0-next.57",
+    "effect": "2.0.0-next.58",
     "prettier": "^3.1.0",
     "tsup": "^8.0.1",
     "tsx": "^4.6.1",
@@ -48,6 +48,6 @@
     "vitest": "^0.34.6"
   },
   "peerDependencies": {
-    "effect": "2.0.0-next.57"
+    "effect": "2.0.0-next.58"
   }
 }
