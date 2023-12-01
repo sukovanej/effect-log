@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.24.1
+
+### Patch Changes
+
+- 8f50095: Update effect.
+
 ## 0.24.0
 
 ### Minor Changes
