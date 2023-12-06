@@ -1,6 +1,6 @@
 {
   "name": "effect-log",
-  "version": "0.24.1",
+  "version": "0.24.2",
   "description": "Logging batteris for effect-ts",
   "publishConfig": {
     "access": "public",
