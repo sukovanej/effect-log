@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.24.2
+
+### Patch Changes
+
+- e4448da: Update effect.
+
 ## 0.24.1
 
 ### Patch Changes
