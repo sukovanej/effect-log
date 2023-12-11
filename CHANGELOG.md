@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.24.3
+
+### Patch Changes
+
+- 4012a45: Update effect.
+
 ## 0.24.2
 
 ### Patch Changes
