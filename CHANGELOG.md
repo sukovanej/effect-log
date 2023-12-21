@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.24.5
+
+### Patch Changes
+
+- a3f1e1c: Update effect.
+
 ## 0.24.4
 
 ### Patch Changes
