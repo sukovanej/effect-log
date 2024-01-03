@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.25.0
+
+### Minor Changes
+
+- ad42b41: Update effect.
+
 ## 0.24.5
 
 ### Patch Changes
