@@ -12,8 +12,8 @@ devDependencies:
     specifier: ^4.3.0
     version: 4.3.0(prettier@3.2.2)
   effect:
-    specifier: 2.0.5
-    version: 2.0.5
+    specifier: 2.1.0
+    version: 2.1.0
   prettier:
     specifier: ^3.2.2
     version: 3.2.2
@@ -1251,8 +1251,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.0.5:
-    resolution: {integrity: sha512-xu3w2lFfjLvmeNlzdSXgtlwynbKr+FcEkfVHDpkJno41gHfuGZDnpAGHw//fOPqNUdcX728vtZkyRvZ0xMlgag==}
+  /effect@2.1.0:
+    resolution: {integrity: sha512-fZfyDtlw5RSUA5oQTBu+LOjXwcQb2lGfW7XKKCd34aELjoUKeIxm8HVo6bkpPLlPARqyyT5DfrlIhjrg2RiZCQ==}
     dev: true
 
   /emoji-regex@8.0.0:
@@ -1309,7 +1309,7 @@ packages:
       object-keys: 1.1.1
       object.assign: 4.1.5
       regexp.prototype.flags: 1.5.1
-      safe-array-concat: 1.0.1
+      safe-array-concat: 1.1.0
       safe-regex-test: 1.0.2
       string.prototype.trim: 1.2.8
       string.prototype.trimend: 1.0.7
@@ -2569,8 +2569,8 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
-  /safe-array-concat@1.0.1:
-    resolution: {integrity: sha512-6XbUAseYE2KtOuGueyeobCySj9L4+66Tn6KQMOPQJrAJEowYKW/YR/MGJZl7FdydUdaFu4LYyDZjxf4/Nmo23Q==}
+  /safe-array-concat@1.1.0:
+    resolution: {integrity: sha512-ZdQ0Jeb9Ofti4hbt5lX3T2JcAamT9hfzYU1MNB+z/jaEbB6wfFfPIR/zEORmZqobkCCJhSjodobH6WHNmJ97dg==}
     engines: {node: '>=0.4'}
     dependencies:
       call-bind: 1.0.5
