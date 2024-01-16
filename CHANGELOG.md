@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.25.1
+
+### Patch Changes
+
+- afb0d28: Update effect.
+
 ## 0.25.0
 
 ### Minor Changes
