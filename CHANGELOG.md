@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.25.2
+
+### Patch Changes
+
+- 5cada65: Update effect.
+
 ## 0.25.1
 
 ### Patch Changes
