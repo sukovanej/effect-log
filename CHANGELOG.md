@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.26.0
+
+### Minor Changes
+
+- 9fd51e4: Add options for JSON logger. Add support for log spans.
+
 ## 0.25.2
 
 ### Patch Changes
