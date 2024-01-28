@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.27.0
+
+### Minor Changes
+
+- d3bf790: Add `enableColors` option for PrettyLogger.
+
 ## 0.26.0
 
 ### Minor Changes
