@@ -15,7 +15,7 @@ import { PrettyLog } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
-// These are the defaults, you can ommit the argument
+// These are the defaults. You can omit the argument
 // completely if you're okay with the defaults.
 const logger = PrettyLog.layer({
   showFiberId: true,
@@ -41,7 +41,7 @@ import { JsonLogger } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
-// These are the defaults, you can ommit the argument
+// These are the defaults. You can omit the argument
 // completely if you're okay with the defaults.
 const logger = JsonLogger.layer({
   showFiberId: true,
