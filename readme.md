@@ -21,6 +21,7 @@ const logger = PrettyLog.layer({
   showFiberId: true,
   showTime: true,
   showSpans: true,
+  enableColors: true,
 });
 
 pipe(exampleEffect, Effect.provide(logger), Effect.runSync);
