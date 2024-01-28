@@ -1,3 +1,4 @@
+import { List } from "effect";
 import * as FiberId from "effect/FiberId";
 import * as HashMap from "effect/HashMap";
 import * as Layer from "effect/Layer";
@@ -5,30 +6,57 @@ import * as Logger from "effect/Logger";
 
 import { serializeUnknown } from "effect-log/internal";
 
-export const make = (messageField?: string) =>
-  Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
-    const tags: Record<string, unknown> = HashMap.reduce(
-      annotations,
-      {},
-      (acc, v, k) => ({
-        ...acc,
-        [k]: v,
-      }),
-    );
+export interface Options {
+  showFiberId: boolean;
+  showTime: boolean;
+  showSpans: boolean;
+  messageField: string;
+}
 
-    tags["date"] = date;
-    tags["logLevel"] = logLevel.label;
-    tags[messageField ?? "message"] = serializeUnknown(message);
-    tags["fiberId"] = FiberId.threadName(fiberId);
+const defaultOptions: Options = {
+  showFiberId: true,
+  showTime: true,
+  showSpans: true,
+  messageField: "message",
+};
 
-    if (cause._tag !== "Empty") {
-      tags["cause"] = cause;
-    }
+export const make = (options?: Partial<Options>) =>
+  Logger.make(
+    ({ fiberId, logLevel, message, annotations, cause, date, spans }) => {
+      const _options = { ...defaultOptions, ...options };
 
-    console.log(JSON.stringify(tags));
-  });
+      const tags: Record<string, unknown> = HashMap.reduce(
+        annotations,
+        {},
+        (acc, v, k) => ({
+          ...acc,
+          [k]: v,
+        }),
+      );
+
+      if (_options.showTime) {
+        tags["date"] = date;
+      }
+      tags["logLevel"] = logLevel.label;
+      tags[_options.messageField] = serializeUnknown(message);
+
+      if (_options.showFiberId) {
+        tags["fiberId"] = FiberId.threadName(fiberId);
+      }
+
+      if (_options.showSpans && List.isCons(spans)) {
+        tags["spans"] = List.toArray(spans).map((span) => span.label);
+      }
+
+      if (cause._tag !== "Empty") {
+        tags["cause"] = cause;
+      }
+
+      console.log(JSON.stringify(tags));
+    },
+  );
 
 export const layer: (
-  messageFields?: string,
-) => Layer.Layer<never, never, never> = (messageField) =>
-  Logger.replace(Logger.defaultLogger, make(messageField));
+  options?: Partial<Options>,
+) => Layer.Layer<never, never, never> = (options) =>
+  Logger.replace(Logger.defaultLogger, make(options ?? {}));

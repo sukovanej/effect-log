@@ -1,3 +1,4 @@
+import { List, LogSpan } from "effect";
 import * as Cause from "effect/Cause";
 import * as FiberId from "effect/FiberId";
 import { pipe } from "effect/Function";
@@ -10,8 +11,10 @@ import * as ReadonlyArray from "effect/ReadonlyArray";
 import { serializeUnknown } from "effect-log/internal";
 
 const RESET = "\x1b[0m";
-const DIM = "\x1b[2m";
 const BOLD = "\x1b[1m";
+const DIM = "\x1b[2m";
+const ITALIC = "\x1b[3m";
+
 const RED = "\x1b[31m";
 const GREEN = "\x1b[32m";
 const YELLOW = "\x1b[33m";
@@ -32,11 +35,13 @@ const SEVERITY_TO_COLOR: Record<LogLevel.LogLevel["_tag"], string> = {
 export interface PrettyLoggerOptions {
   showFiberId: boolean;
   showTime: boolean;
+  showSpans: boolean;
 }
 
 const defaultOptions: PrettyLoggerOptions = {
   showFiberId: true,
   showTime: true,
+  showSpans: true,
 };
 
 const createTimeString = (date: Date) => {
@@ -77,28 +82,50 @@ const createText = (message: unknown, cause: Cause.Cause<unknown>) =>
     ReadonlyArray.join(" "),
   );
 
+const createSpanText = (spans: List.List<LogSpan.LogSpan>) => {
+  if (List.isNil(spans)) {
+    return "";
+  }
+
+  const text = List.reduce(
+    List.unsafeTail(spans),
+    List.unsafeHead(spans).label,
+    (acc, span) => `${acc} -> ${span.label}`,
+  );
+
+  return ` ${DIM}${ITALIC}${text}${RESET}`;
+};
+
 export const make = (options?: Partial<PrettyLoggerOptions>) =>
-  Logger.make(({ fiberId, logLevel, message, annotations, cause, date }) => {
-    const _options = { ...defaultOptions, ...options };
+  Logger.make(
+    ({ fiberId, logLevel, message, annotations, cause, date, spans }) => {
+      const _options = { ...defaultOptions, ...options };
 
-    const logLevelStr = createLogLevelString(logLevel);
-    const timeText = _options.showTime ? `${createTimeString(date)} ` : "";
-    const fiberText = _options?.showFiberId
-      ? `${DIM}(Fiber ${FiberId.threadName(fiberId)})${RESET} `
-      : "";
+      const logLevelStr = createLogLevelString(logLevel);
+      const timeText = _options.showTime ? `${createTimeString(date)} ` : "";
+      const fiberText = _options.showFiberId
+        ? `${DIM}(Fiber ${FiberId.threadName(fiberId)})${RESET} `
+        : "";
 
-    const text = createText(message, cause);
+      const text = createText(message, cause);
 
-    console.log(`${timeText}${fiberText}${logLevelStr} ${text}`);
+      const spansText = _options.showSpans ? createSpanText(spans) : "";
 
-    if (!HashMap.isEmpty(annotations)) {
-      const text = HashMap.reduce(annotations, [] as string[], (acc, v, k) => [
-        ...acc,
-        `${WHITE}"${k}"${RESET}: ${serializeUnknown(v)}`,
-      ]);
-      console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
-    }
-  });
+      console.log(`${timeText}${fiberText}${logLevelStr}${spansText} ${text}`);
+
+      if (!HashMap.isEmpty(annotations)) {
+        const text = HashMap.reduce(
+          annotations,
+          [] as string[],
+          (acc, v, k) => [
+            ...acc,
+            `${WHITE}"${k}"${RESET}: ${serializeUnknown(v)}`,
+          ],
+        );
+        console.log(`ᐉ ${DIM}{${RESET} ${text.join(", ")} ${DIM}}${RESET}`);
+      }
+    },
+  );
 
 export const layer: (
   options?: Partial<PrettyLoggerOptions>,

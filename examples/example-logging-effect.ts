@@ -13,6 +13,7 @@ export const exampleEffect = pipe(
       Effect.annotateLogs("json", { value: 1, another: { hello: [3, 2, 1] } }),
     ),
   ),
+  Effect.withLogSpan("mySpan"),
   Effect.annotateLogs("rootCause", "milan"),
   Effect.tap(() =>
     pipe(Effect.logFatal("Don Quijote"), Effect.annotateLogs("likes", "fp-ts")),
@@ -21,6 +22,7 @@ export const exampleEffect = pipe(
   Effect.tap(() =>
     Effect.logWarning("Lesnek is a beautiful surname, is it not?"),
   ),
+  Effect.withLogSpan("stuff"),
   Effect.annotateLogs("myName", "Earl"),
   Effect.tap(() => Effect.logDebug("Sooo sad, not annotations for me")),
   Effect.tap(() => Effect.logTrace("Never Gonna Give You Up")),
@@ -29,9 +31,11 @@ export const exampleEffect = pipe(
   Effect.flatMap(() =>
     pipe(Effect.log(""), Effect.annotateLogs("likes", "fp-ts")),
   ),
+  Effect.withSpan("span-label-3"),
   Effect.flatMap(() =>
     pipe(Effect.log(undefined), Effect.annotateLogs("likes", "fp-ts")),
   ),
+  Effect.withLogSpan("helloWorld"),
   Effect.flatMap(() =>
     pipe(Effect.log(null), Effect.annotateLogs("likes", "fp-ts")),
   ),
