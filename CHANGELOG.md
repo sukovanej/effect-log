@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.28.0
+
+### Minor Changes
+
+- 270e2af: Unify setup with the effect ecosystem.
+
 ## 0.27.0
 
 ### Minor Changes
