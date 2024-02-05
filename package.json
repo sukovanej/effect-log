@@ -1,50 +1,68 @@
 {
   "name": "effect-log",
+  "type": "module",
   "version": "0.27.0",
+  "license": "MIT",
+  "author": "Milan Suk <Milansuk@email.cz>",
   "description": "Logging batteris for effect-ts",
+  "homepage": "https://sukovanej.github.io/effect-log",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sukovanej/effect-log.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sukovanej/effect-log/issues"
+  },
+  "packageManager": "pnpm@8.15.0",
   "publishConfig": {
     "access": "public",
     "directory": "dist"
   },
-  "type": "module",
-  "main": "index.cjs",
-  "types": "index.d.ts",
-  "exports": {
-    ".": {
-      "require": "./index.cjs",
-      "import": "./index.js",
-      "types": "./index.d.ts"
-    },
-    "./*": {
-      "import": {
-        "types": "./*.d.ts",
-        "default": "./*.js"
-      },
-      "require": {
-        "types": "./*.d.ts",
-        "default": "./*.cjs"
-      }
-    }
-  },
   "scripts": {
-    "build": "tsup && cp package.json dist/ && cp readme.md dist/",
-    "watch": "tsc -w -p tsconfig.json",
-    "format": "prettier -w src tests examples",
-    "lint": "prettier src tests examples --check",
-    "test": "vitest run",
-    "version": "changeset version"
+    "build": "pnpm build-prepare && pnpm build-esm && pnpm build-cjs && pnpm build-annotate && build-utils pack-v2",
+    "build-prepare": "build-utils prepare-v2",
+    "build-esm": "tsc -b tsconfig.build.json",
+    "build-cjs": "babel build/esm --plugins @babel/transform-export-namespace-from --plugins @babel/transform-modules-commonjs --out-dir build/cjs --source-maps",
+    "build-annotate": "babel build --plugins annotate-pure-calls --out-dir build --source-maps",
+    "clean": "rimraf build dist coverage .tsbuildinfo",
+    "check": "tsc -b tsconfig.json",
+    "check:watch": "tsc -b tsconfig.json --watch",
+    "test": "vitest",
+    "coverage": "vitest --run --coverage related",
+    "coverage-all": "vitest --run --coverage",
+    "circular": "madge --extensions ts --circular --no-color --no-spinner --warning src",
+    "lint": "eslint src test examples",
+    "lint-fix": "eslint src test examples --fix",
+    "docgen": "docgen"
   },
-  "keywords": [],
-  "author": "",
-  "license": "MIT",
   "devDependencies": {
+    "@babel/cli": "^7.23.9",
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-transform-export-namespace-from": "^7.23.4",
+    "@babel/plugin-transform-modules-commonjs": "^7.23.3",
     "@changesets/cli": "^2.27.1",
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@effect/build-utils": "^0.7.2",
+    "@effect/docgen": "^0.3.8",
+    "@effect/eslint-plugin": "^0.1.2",
+    "@effect/language-service": "^0.1.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "@vitest/coverage-v8": "^1.2.2",
+    "babel-plugin-annotate-pure-calls": "^0.4.0",
     "effect": "2.2.3",
+    "eslint": "^8.56.0",
+    "eslint-import-resolver-typescript": "^3.6.1",
+    "eslint-plugin-codegen": "^0.23.0",
+    "eslint-plugin-deprecation": "^2.0.0",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-sort-destructure-keys": "^1.5.0",
+    "madge": "^6.1.0",
     "prettier": "^3.2.5",
-    "tsup": "^8.0.1",
+    "rimraf": "^5.0.5",
     "tsx": "^4.7.0",
     "typescript": "^5.3.3",
+    "vite": "^5.0.12",
     "vitest": "^1.2.2"
   },
   "peerDependencies": {
