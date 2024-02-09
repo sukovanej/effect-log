@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.29.0
+
+### Minor Changes
+
+- 939fceb: Minor effect update.
+
 ## 0.28.0
 
 ### Minor Changes
