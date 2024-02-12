@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.0
+
+### Minor Changes
+
+- 5d60f98: Add `logLevelField` and `logLevelFormat` options for the JsonLogger.
+
 ## 0.29.0
 
 ### Minor Changes
