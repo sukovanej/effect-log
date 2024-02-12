@@ -3,6 +3,7 @@
  *
  * @since 1.0.0
  */
+import type { LogLevel } from "effect"
 import { List } from "effect"
 import * as FiberId from "effect/FiberId"
 import * as HashMap from "effect/HashMap"
@@ -20,6 +21,8 @@ export interface Options {
   showTime: boolean
   showSpans: boolean
   messageField: string
+  logLevelField: string
+  logLevelFormat: "lowercase" | "uppercase" | "capitalized"
 }
 
 /** @internal */
@@ -27,18 +30,33 @@ const defaultOptions: Options = {
   showFiberId: true,
   showTime: true,
   showSpans: true,
-  messageField: "message"
+  messageField: "message",
+  logLevelField: "level",
+  logLevelFormat: "capitalized"
+}
+
+const capitalize = (string: string) => string.charAt(0).toUpperCase() + string.slice(1).toLowerCase()
+
+/** @internal */
+const formatLogLevel: (format: Options["logLevelFormat"]) => (logLevel: LogLevel.LogLevel) => string = (format) => {
+  if (format === "lowercase") {
+    return (logLevel) => logLevel.label.toLowerCase()
+  } else if (format === "uppercase") {
+    return (logLevel) => logLevel.label.toUpperCase()
+  }
+  return (logLevel) => capitalize(logLevel.label)
 }
 
 /**
  * @category constructors
  * @since 1.0.0
  */
-export const make = (options?: Partial<Options>) =>
-  Logger.make(
-    ({ annotations, cause, date, fiberId, logLevel, message, spans }) => {
-      const _options = { ...defaultOptions, ...options }
+export const make: (options?: Partial<Options>) => Logger.Logger<unknown, void> = (options) => {
+  const _options = { ...defaultOptions, ...options }
+  const _formatLogLevel = formatLogLevel(_options.logLevelFormat)
 
+  return Logger.make(
+    ({ annotations, cause, date, fiberId, logLevel, message, spans }) => {
       const tags: Record<string, unknown> = HashMap.reduce(
         annotations,
         {},
@@ -51,7 +69,7 @@ export const make = (options?: Partial<Options>) =>
       if (_options.showTime) {
         tags["date"] = date
       }
-      tags["logLevel"] = logLevel.label
+      tags[_options.logLevelField] = _formatLogLevel(logLevel)
       tags[_options.messageField] = serializeUnknown(message)
 
       if (_options.showFiberId) {
@@ -69,6 +87,7 @@ export const make = (options?: Partial<Options>) =>
       console.log(JSON.stringify(tags))
     }
   )
+}
 
 /**
  * @category layers
