@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.1
+
+### Patch Changes
+
+- 720e875: Update effect.
+
 ## 0.30.0
 
 ### Minor Changes
