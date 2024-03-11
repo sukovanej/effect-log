@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.5
+
+### Patch Changes
+
+- db5ea8d: Use namespace imports internally.
+
 ## 0.30.4
 
 ### Patch Changes
