@@ -3,12 +3,12 @@
  *
  * @since 1.0.0
  */
-import type { LogLevel } from "effect"
-import { List } from "effect"
 import * as FiberId from "effect/FiberId"
 import * as HashMap from "effect/HashMap"
 import type * as Layer from "effect/Layer"
+import * as List from "effect/List"
 import * as Logger from "effect/Logger"
+import type * as LogLevel from "effect/LogLevel"
 
 import { serializeUnknown } from "./internal/serializeUnkown.js"
 

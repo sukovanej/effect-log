@@ -3,15 +3,15 @@
  *
  * @since 1.0.0
  */
-import type { LogSpan } from "effect"
-import { List } from "effect"
 import * as Cause from "effect/Cause"
 import * as FiberId from "effect/FiberId"
 import { identity, pipe } from "effect/Function"
 import * as HashMap from "effect/HashMap"
 import type * as Layer from "effect/Layer"
+import * as List from "effect/List"
 import * as Logger from "effect/Logger"
 import type * as LogLevel from "effect/LogLevel"
+import type * as LogSpan from "effect/LogSpan"
 import * as ReadonlyArray from "effect/ReadonlyArray"
 
 import { serializeUnknown } from "./internal/serializeUnkown.js"
