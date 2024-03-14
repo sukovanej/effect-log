@@ -45,8 +45,8 @@ devDependencies:
     specifier: ^0.4.0
     version: 0.4.0(@babel/core@7.24.0)
   effect:
-    specifier: 2.4.5
-    version: 2.4.5
+    specifier: 2.4.6
+    version: 2.4.6
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -1829,7 +1829,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001597
-      electron-to-chromium: 1.4.703
+      electron-to-chromium: 1.4.704
       node-releases: 2.0.14
       update-browserslist-db: 1.0.13(browserslist@4.23.0)
     dev: true
@@ -2401,12 +2401,12 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.4.5:
-    resolution: {integrity: sha512-eQiKdI8GIxojn1Tia6uSMfFKCU18j7XcOeI0kiafpikCr3T91RrYmcazYRFKFGGWLM2JF0k96n7Cq3Iy4bWQ6A==}
+  /effect@2.4.6:
+    resolution: {integrity: sha512-gaZC+aopWvS67SX8RFT3mirabjpVBk5qshj/Z3IKW35DjzpQ8WhAE7VWwfBBWWMBuQ/B0RsbzKR8YGN2AivIgQ==}
     dev: true
 
-  /electron-to-chromium@1.4.703:
-    resolution: {integrity: sha512-094ZZC4nHXPKl/OwPinSMtLN9+hoFkdfQGKnvXbY+3WEAYtVDpz9UhJIViiY6Zb8agvqxiaJzNG9M+pRZWvSZw==}
+  /electron-to-chromium@1.4.704:
+    resolution: {integrity: sha512-OK01+86Qvby1V6cTiowVbhp25aX4DLZnwar+NocAOXdzKAByd+jq5156bmo4kHwevWMknznW18Y/Svfk2dU91A==}
     dev: true
 
   /emoji-regex@8.0.0:
