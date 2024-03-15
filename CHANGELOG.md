@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.9
+
+### Patch Changes
+
+- a0d4638: Update effect.
+
 ## 0.30.8
 
 ### Patch Changes
