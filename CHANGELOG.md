@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.10
+
+### Patch Changes
+
+- 754653d: Update effect.
+
 ## 0.30.9
 
 ### Patch Changes

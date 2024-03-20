@@ -1,7 +1,7 @@
 {
   "name": "effect-log",
   "type": "module",
-  "version": "0.30.9",
+  "version": "0.30.10",
   "license": "MIT",
   "author": "Milan Suk <Milansuk@email.cz>",
   "description": "Logging batteris for effect-ts",
