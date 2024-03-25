@@ -45,8 +45,8 @@ devDependencies:
     specifier: ^0.4.0
     version: 0.4.0(@babel/core@7.24.3)
   effect:
-    specifier: 2.4.11
-    version: 2.4.11
+    specifier: 2.4.13
+    version: 2.4.13
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -84,8 +84,8 @@ devDependencies:
     specifier: ^5.4.3
     version: 5.4.3
   vite:
-    specifier: ^5.2.3
-    version: 5.2.3
+    specifier: ^5.2.6
+    version: 5.2.6
   vitest:
     specifier: ^1.4.0
     version: 1.4.0
@@ -2621,8 +2621,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.4.11:
-    resolution: {integrity: sha512-BMfpWloJdV8+lVGNCesOpE6e5k27nL7F5BiWtheOEyWEQiWkM6uLK6pQ1MK9bDmFELiqe961CHFqiIY9HymLFw==}
+  /effect@2.4.13:
+    resolution: {integrity: sha512-QTQgeJOn4S4RdDWHieHc/aaB2sdRLN0zeF+tMEDvGn19tFcZOmqpnSKcYuiGvHaCTE0viexFbBH+iAgfg9Gurw==}
     dev: true
 
   /electron-to-chromium@1.4.715:
@@ -5979,7 +5979,7 @@ packages:
       debug: 4.3.4
       pathe: 1.1.2
       picocolors: 1.0.0
-      vite: 5.2.3
+      vite: 5.2.6
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -5991,8 +5991,8 @@ packages:
       - terser
     dev: true
 
-  /vite@5.2.3:
-    resolution: {integrity: sha512-+i1oagbvkVIhEy9TnEV+fgXsng13nZM90JQbrcPrf6DvW2mXARlz+DK7DLiDP+qeKoD1FCVx/1SpFL1CLq9Mhw==}
+  /vite@5.2.6:
+    resolution: {integrity: sha512-FPtnxFlSIKYjZ2eosBQamz4CbyrTizbZ3hnGJlh/wMtCrlp1Hah6AzBLjGI5I2urTfNnpovpHdrL6YRuBOPnCA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -6068,7 +6068,7 @@ packages:
       strip-literal: 2.0.0
       tinybench: 2.6.0
       tinypool: 0.8.2
-      vite: 5.2.3
+      vite: 5.2.6
       vite-node: 1.4.0
       why-is-node-running: 2.2.2
     transitivePeerDependencies:
