@@ -1,5 +1,12 @@
 # effect-log
 
+## 0.30.14
+
+### Patch Changes
+
+- c3cd48d: Update effect.
+- 5686c41: Update effect.
+
 ## 0.30.13
 
 ### Patch Changes
