@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.16
+
+### Patch Changes
+
+- ba59f7f: Update effect.
+
 ## 0.30.15
 
 ### Patch Changes
