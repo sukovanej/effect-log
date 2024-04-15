@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.30.17
+
+### Patch Changes
+
+- 9d48b52: Update effect.
+
 ## 0.30.16
 
 ### Patch Changes
