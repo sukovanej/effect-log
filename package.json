@@ -42,7 +42,7 @@
     "@babel/plugin-transform-modules-commonjs": "^7.24.1",
     "@changesets/cli": "^2.27.1",
     "@effect/build-utils": "^0.7.6",
-    "@effect/docgen": "^0.4.2",
+    "@effect/docgen": "^0.4.1",
     "@effect/eslint-plugin": "^0.1.2",
     "@effect/language-service": "^0.1.0",
     "@typescript-eslint/eslint-plugin": "^7.7.0",
