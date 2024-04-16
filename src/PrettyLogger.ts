@@ -3,6 +3,7 @@
  *
  * @since 1.0.0
  */
+import * as Array from "effect/Array"
 import * as Cause from "effect/Cause"
 import * as FiberId from "effect/FiberId"
 import { identity, pipe } from "effect/Function"
@@ -12,7 +13,6 @@ import * as List from "effect/List"
 import * as Logger from "effect/Logger"
 import type * as LogLevel from "effect/LogLevel"
 import type * as LogSpan from "effect/LogSpan"
-import * as ReadonlyArray from "effect/ReadonlyArray"
 
 import { serializeUnknown } from "./internal/serializeUnkown.js"
 
@@ -157,8 +157,8 @@ const createText = (
 ) =>
   pipe(
     [createCauseMessage(cause), messageText(colorService, message)],
-    ReadonlyArray.filter((i) => i !== ""),
-    ReadonlyArray.join(" ")
+    Array.filter((i) => i !== ""),
+    Array.join(" ")
   )
 
 /** @internal */
