@@ -45,8 +45,8 @@ devDependencies:
     specifier: ^0.4.0
     version: 0.4.0(@babel/core@7.24.4)
   effect:
-    specifier: 2.4.19
-    version: 2.4.19
+    specifier: 3.0.0
+    version: 3.0.0
   eslint:
     specifier: ^8.57.0
     version: 8.57.0
@@ -2510,8 +2510,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /effect@2.4.19:
-    resolution: {integrity: sha512-z/rn878Po3n522g/AYUDHD1SsZaZdvRxlTCLQ8xl8H6xA82nBwwooD1mdn/73Uywmp7d84oay3w3528r0Uyd0w==}
+  /effect@3.0.0:
+    resolution: {integrity: sha512-8yVxuahojpD8Y6ynrvIlSWD2xsea/PyGnjA4V5c7v0fOMJafgsKUNUHErBAr6YoPikmtOfR9zqNWRd9u5QaWEQ==}
     dev: true
 
   /electron-to-chromium@1.4.736:
