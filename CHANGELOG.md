@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.31.0
+
+### Minor Changes
+
+- be6dbfb: Update effect to 3.0.
+
 ## 0.30.17
 
 ### Patch Changes
