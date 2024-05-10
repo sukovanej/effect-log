@@ -60,8 +60,8 @@
     "eslint-plugin-sort-destructure-keys": "^2.0.0",
     "madge": "^7.0.0",
     "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "tsx": "^4.9.3",
+    "rimraf": "^5.0.6",
+    "tsx": "^4.9.4",
     "typescript": "^5.4.5",
     "vite": "^5.2.11",
     "vitest": "^1.6.0"
