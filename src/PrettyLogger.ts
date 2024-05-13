@@ -117,7 +117,8 @@ const createTimeString = (colorService: ColorService, date: Date) => {
   const hoursText = date.getHours().toString().padStart(2, "0")
   const minutesText = date.getMinutes().toString().padStart(2, "0")
   const secondsText = date.getSeconds().toString().padStart(2, "0")
-  return colorService.yellow(`${hoursText}:${minutesText}:${secondsText}`)
+  const millisText = date.getMilliseconds().toString().padStart(3, "0")
+  return colorService.yellow(`${hoursText}:${minutesText}:${secondsText}.${millisText}`)
 }
 
 /** @internal */
