@@ -174,7 +174,7 @@ const createSpanText = (
   const text = List.reduce(
     List.unsafeTail(spans),
     List.unsafeHead(spans).label,
-    (acc, span) => `${acc} -> ${span.label}`
+    (acc, span) => `${span.label} -> ${acc}`
   )
 
   return ` ${colorService.dimItalic(text)}`
