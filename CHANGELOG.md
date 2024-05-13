@@ -1,5 +1,13 @@
 # effect-log
 
+## 0.31.2
+
+### Patch Changes
+
+- [`87a4e58`](https://github.com/sukovanej/effect-log/commit/87a4e58401334c80f0c6025f603a01a990874367) Thanks [@sukovanej](https://github.com/sukovanej)! - Add milliseconds to PrettyLogger output.
+
+- [`3bac6b1`](https://github.com/sukovanej/effect-log/commit/3bac6b1be3faefab225a4d4564eaee7e00a1a382) Thanks [@sukovanej](https://github.com/sukovanej)! - Fix log spans order.
+
 ## 0.31.1
 
 ### Patch Changes
