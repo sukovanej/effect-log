@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.31.3
+
+### Patch Changes
+
+- [`ace0203`](https://github.com/sukovanej/effect-log/commit/ace0203393b3cd69d566c0981413f8ccb2cbc8eb) Thanks [@sukovanej](https://github.com/sukovanej)! - Update effect.
+
 ## 0.31.2
 
 ### Patch Changes
