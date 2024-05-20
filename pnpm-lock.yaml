@@ -31,7 +31,7 @@ importers:
         version: 0.7.6
       '@effect/docgen':
         specifier: ^0.4.3
-        version: 0.4.3(tsx@4.10.4)(typescript@5.4.5)
+        version: 0.4.3(tsx@4.10.5)(typescript@5.4.5)
       '@effect/eslint-plugin':
         specifier: ^0.1.2
         version: 0.1.2
@@ -51,8 +51,8 @@ importers:
         specifier: ^0.4.0
         version: 0.4.0(@babel/core@7.24.5)
       effect:
-        specifier: 3.1.5
-        version: 3.1.5
+        specifier: 3.2.1
+        version: 3.2.1
       eslint:
         specifier: ^8.57.0
         version: 8.57.0
@@ -84,8 +84,8 @@ importers:
         specifier: ^5.0.7
         version: 5.0.7
       tsx:
-        specifier: ^4.10.4
-        version: 4.10.4
+        specifier: ^4.10.5
+        version: 4.10.5
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -1272,8 +1272,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  effect@3.1.5:
-    resolution: {integrity: sha512-nTkW/ViRF8cXVMKjusYMVp7L1eqLwMZV7K6GHoqq3MD7NjPT/tJRVhY8d6z5Vam9kxgvRAzqwJKkaRpRVz1jTw==}
+  effect@3.2.1:
+    resolution: {integrity: sha512-WnM7QyHekA+oWkJyD1g99BDqD3atAXKjarcDnUX9alIKLd8EFXdY333wpgcNJkSqtvXDsx8qYWOMbuivdwoN2w==}
 
   electron-to-chromium@1.4.774:
     resolution: {integrity: sha512-132O1XCd7zcTkzS3FgkAzKmnBuNJjK8WjcTtNuoylj7MYbqw5eXehjQ5OK91g0zm7OTKIPeaAG4CPoRfD9M1Mg==}
@@ -1542,8 +1542,8 @@ packages:
     resolution: {integrity: sha512-TMKDUnIte6bfb5nWv7V/caI169OHgvwjb7V4WkeUvbQQdjr5rWKqHFiKWb/fcOwB+CzBT+qbWjvj+DVwRskpIg==}
     engines: {node: '>=14'}
 
-  fp-ts@2.16.5:
-    resolution: {integrity: sha512-N8T8PwMSeTKKtkm9lkj/zSTAnPC/aJIIrQhnHxxkL0KLsRCNUPANksJOlMXxcKKCo7H1ORP3No9EMD+fP0tsdA==}
+  fp-ts@2.16.6:
+    resolution: {integrity: sha512-v7w209VPj4L6pPn/ftFRJu31Oa8QagwcVw7BZmLCUWU4AQoc954rX9ogSIahDf67Pg+GjPbkW/Kn9XWnlWJG0g==}
 
   fs-extra@7.0.1:
     resolution: {integrity: sha512-YJDaCJZEnBmcbw13fvdAM9AwNOJwOzrE4pqMqBq5nFiEqXUqHwlK4B+3pUw6JNvfSPtX05xFHtYy/1ni01eGCw==}
@@ -2906,8 +2906,8 @@ packages:
     peerDependencies:
       typescript: '>=2.8.0 || >= 3.2.0-dev || >= 3.3.0-dev || >= 3.4.0-dev || >= 3.5.0-dev || >= 3.6.0-dev || >= 3.6.0-beta || >= 3.7.0-dev || >= 3.7.0-beta'
 
-  tsx@4.10.4:
-    resolution: {integrity: sha512-Gtg9qnZWNqC/OtcgiXfoAUdAKx3/cgKOYvEocAsv+m21MV/eKpV/WUjRXe6/sDCaGBl2/v8S6v29BpUnGMCX5A==}
+  tsx@4.10.5:
+    resolution: {integrity: sha512-twDSbf7Gtea4I2copqovUiNTEDrT8XNFXsuHpfGbdpW/z9ZW4fTghzzhAG0WfrCuJmJiOEY1nLIjq4u3oujRWQ==}
     engines: {node: '>=18.0.0'}
     hasBin: true
 
@@ -3507,13 +3507,13 @@ snapshots:
 
   '@effect/build-utils@0.7.6': {}
 
-  '@effect/docgen@0.4.3(tsx@4.10.4)(typescript@5.4.5)':
+  '@effect/docgen@0.4.3(tsx@4.10.5)(typescript@5.4.5)':
     dependencies:
       '@effect/markdown-toc': 0.1.0
       doctrine: 3.0.0
       glob: 10.3.15
       prettier: 3.2.5
-      tsx: 4.10.4
+      tsx: 4.10.5
       typescript: 5.4.5
 
   '@effect/eslint-plugin@0.1.2':
@@ -4483,7 +4483,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  effect@3.1.5: {}
+  effect@3.2.1: {}
 
   electron-to-chromium@1.4.774: {}
 
@@ -4674,9 +4674,9 @@ snapshots:
       dedent: 1.5.3
       eslint-plugin-markdown: 4.0.1(eslint@8.57.0)
       expect: 29.7.0
-      fp-ts: 2.16.5
+      fp-ts: 2.16.6
       glob: 10.3.15
-      io-ts: 2.2.21(fp-ts@2.16.5)
+      io-ts: 2.2.21(fp-ts@2.16.6)
       io-ts-extra: 0.11.6
       js-yaml: 3.14.1
       lodash: 4.17.21
@@ -4932,7 +4932,7 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
-  fp-ts@2.16.5: {}
+  fp-ts@2.16.6: {}
 
   fs-extra@7.0.1:
     dependencies:
@@ -5135,12 +5135,12 @@ snapshots:
 
   io-ts-extra@0.11.6:
     dependencies:
-      fp-ts: 2.16.5
-      io-ts: 2.2.21(fp-ts@2.16.5)
+      fp-ts: 2.16.6
+      io-ts: 2.2.21(fp-ts@2.16.6)
 
-  io-ts@2.2.21(fp-ts@2.16.5):
+  io-ts@2.2.21(fp-ts@2.16.6):
     dependencies:
-      fp-ts: 2.16.5
+      fp-ts: 2.16.6
 
   is-alphabetical@1.0.4: {}
 
@@ -6308,7 +6308,7 @@ snapshots:
       tslib: 1.14.1
       typescript: 5.4.5
 
-  tsx@4.10.4:
+  tsx@4.10.5:
     dependencies:
       esbuild: 0.20.2
       get-tsconfig: 4.7.5
