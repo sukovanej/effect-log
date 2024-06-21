@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.31.5
+
+### Patch Changes
+
+- [`51c6e0c`](https://github.com/sukovanej/effect-log/commit/51c6e0cf92db9258de31d47c536315e1eb24749d) Thanks [@sukovanej](https://github.com/sukovanej)! - Update effect to 3.4.0.
+
 ## 0.31.4
 
 ### Patch Changes
