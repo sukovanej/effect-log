@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.31.6
+
+### Patch Changes
+
+- [`af150ad`](https://github.com/sukovanej/effect-log/commit/af150ade04c69bff0700a933a6c63be141c9cb1e) Thanks [@sukovanej](https://github.com/sukovanej)! - Update dependencies.
+
 ## 0.31.5
 
 ### Patch Changes
