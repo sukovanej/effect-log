@@ -3,6 +3,7 @@
  *
  * @since 1.0.0
  */
+import * as Array from "effect/Array"
 import * as FiberId from "effect/FiberId"
 import * as HashMap from "effect/HashMap"
 import type * as Layer from "effect/Layer"
@@ -70,7 +71,7 @@ export const make: (options?: Partial<Options>) => Logger.Logger<unknown, void> 
         tags["date"] = date
       }
       tags[_options.logLevelField] = _formatLogLevel(logLevel)
-      tags[_options.messageField] = serializeUnknown(message)
+      tags[_options.messageField] = Array.ensure(message).map(serializeUnknown).join(" ")
 
       if (_options.showFiberId) {
         tags["fiberId"] = FiberId.threadName(fiberId)

@@ -118,7 +118,9 @@ const createTimeString = (colorService: ColorService, date: Date) => {
   const minutesText = date.getMinutes().toString().padStart(2, "0")
   const secondsText = date.getSeconds().toString().padStart(2, "0")
   const millisText = date.getMilliseconds().toString().padStart(3, "0")
-  return colorService.yellow(`${hoursText}:${minutesText}:${secondsText}.${millisText}`)
+  return colorService.yellow(
+    `${hoursText}:${minutesText}:${secondsText}.${millisText}`
+  )
 }
 
 /** @internal */
@@ -139,7 +141,7 @@ const createLogLevelString = (
 }
 
 /** @internal */
-const messageText = (colorService: ColorService, message: unknown) => {
+const messageText = (colorService: ColorService, message: unknown): string => {
   if (message === undefined) {
     return colorService.dim("undefined")
   } else if (message === null) {
@@ -153,11 +155,11 @@ const messageText = (colorService: ColorService, message: unknown) => {
 /** @internal */
 const createText = (
   colorService: ColorService,
-  message: unknown,
+  message: ReadonlyArray<unknown>,
   cause: Cause.Cause<unknown>
 ) =>
   pipe(
-    [createCauseMessage(cause), messageText(colorService, message)],
+    [createCauseMessage(cause), messageText(colorService, message.join(" "))],
     Array.filter((i) => i !== ""),
     Array.join(" ")
   )
@@ -184,7 +186,9 @@ const createSpanText = (
  * @category constructors
  * @since 1.0.0
  */
-export const make = (options?: Partial<Options>): Logger.Logger<unknown, void> =>
+export const make = (
+  options?: Partial<Options>
+): Logger.Logger<unknown, void> =>
   Logger.make(
     ({ annotations, cause, date, fiberId, logLevel, message, spans }) => {
       const _options = { ...defaultOptions, ...options }
@@ -200,7 +204,7 @@ export const make = (options?: Partial<Options>): Logger.Logger<unknown, void> =
         ? colorService.dim(`(Fiber ${FiberId.threadName(fiberId)}) `)
         : ""
 
-      const text = createText(colorService, message, cause)
+      const text = createText(colorService, Array.ensure(message), cause)
 
       const spansText = _options.showSpans
         ? createSpanText(colorService, spans)
