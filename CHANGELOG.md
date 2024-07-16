@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.31.7
+
+### Patch Changes
+
+- [`7262c73`](https://github.com/sukovanej/effect-log/commit/7262c732b220fdab1dc8035bb046555c7ae9fbeb) Thanks [@sukovanej](https://github.com/sukovanej)! - Display array of messages correctly.
+
 ## 0.31.6
 
 ### Patch Changes
