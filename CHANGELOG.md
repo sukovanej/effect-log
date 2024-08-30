@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.32.0
+
+### Minor Changes
+
+- [`fb69eb6`](https://github.com/sukovanej/effect-log/commit/fb69eb68452fa228b4484391da7e3e656c53c616) Thanks [@sukovanej](https://github.com/sukovanej)! - Update effect.
+
 ## 0.31.8
 
 ### Patch Changes
