@@ -1,5 +1,11 @@
 # effect-log
 
+## 0.33.0
+
+### Minor Changes
+
+- [`d871bab`](https://github.com/sukovanej/effect-log/commit/d871baba171c24ab7e31087a29342fd8dce9693f) Thanks [@sukovanej](https://github.com/sukovanej)! - Update effect to 3.8.0
+
 ## 0.32.0
 
 ### Minor Changes
