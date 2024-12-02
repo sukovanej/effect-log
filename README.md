@@ -11,7 +11,7 @@ to the output.
 
 ```typescript
 import { Effect, pipe } from "effect";
-import { PrettyLog } from "effect-log";
+import { PrettyLogger } from "effect-log";
 
 import { exampleEffect } from "./example-logging-effect";
 
