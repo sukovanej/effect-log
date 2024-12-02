@@ -2,6 +2,25 @@
 
 Logging batteris for effect-ts.
 
+## Consider using the official `effect/Logger` instead
+
+Most of the functionality provided by this library is already present directly in the `effect`
+package. In case of the pretty logger, you should strongly consider using the 
+[Logger.pretty](https://effect-ts.github.io/effect/effect/Logger.ts.html#pretty) instead. And,
+in case of the JSON logger, consider using the
+[Logger.json](https://effect-ts.github.io/effect/effect/Logger.ts.html#json). Just be aware
+of few differences:
+
+- the `Logger.json` includes the log annotations in the `annotations` field, the `JsonLogger.layer()`
+  spreads the annotations into the root of the output JSON
+- the `Logger.json` outputs the message as an array into the `message` field, the `JsonLogger.layer()`
+  concatenates the message into a single string
+
+These decisions about the output JSON format were motivated by the fact that I'm targetting
+the Datadog platform. If you want the same output format, you can still achieve it by using
+the [Logger.structuredLogger](https://effect-ts.github.io/effect/effect/Logger.ts.html#structuredlogger)
+and modifying the output using [Logger.map](https://effect-ts.github.io/effect/effect/Logger.ts.html#map).
+
 ## [Pretty logger](examples/pretty-logger.ts)
 
 Use `PrettyLogger.make` to create the pretty logger or `PrettyLogger.layer` to
